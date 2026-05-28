@@ -362,6 +362,31 @@ h3 {
   gap: 10px;
 }
 
+.artifact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.artifact-strip.centered {
+  justify-content: center;
+}
+
+.artifact-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  color: #1e40af;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.15;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+}
+
 .tag,
 .badge {
   display: inline-flex;
@@ -525,6 +550,7 @@ h3 {
 .map-node {
   position: relative;
   display: grid;
+  gap: 5px;
   min-height: 84px;
   place-items: center;
   padding: 14px;
@@ -533,6 +559,17 @@ h3 {
   text-align: center;
   border-radius: var(--radius);
   box-shadow: var(--soft-shadow);
+}
+
+.map-node strong,
+.map-node small {
+  display: block;
+}
+
+.map-node small {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.72rem;
+  font-weight: 750;
 }
 
 .map-node::after {
@@ -546,6 +583,7 @@ h3 {
 }
 
 .map-node:nth-child(4)::after,
+.map-node:nth-child(8)::after,
 .map-node:last-child::after {
   display: none;
 }
@@ -805,11 +843,11 @@ h3 {
 }
 
 .concept-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .concept-card {
-  min-height: 178px;
+  min-height: 172px;
 }
 
 .concept-card .badge {
@@ -896,7 +934,7 @@ h3 {
 }
 
 .trace-row {
-  grid-template-columns: 1.15fr 0.7fr 0.72fr 1fr;
+  grid-template-columns: 1fr 1fr 1.35fr 1fr 0.72fr;
 }
 
 .qa-row {
@@ -1044,11 +1082,11 @@ h3 {
 }
 
 .service-grid {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
 }
 
 .service-card {
-  min-height: 182px;
+  min-height: 160px;
 }
 
 .service-icon {
@@ -1081,6 +1119,10 @@ h3 {
 
 .service-icon.log {
   background: linear-gradient(135deg, #fecaca, #ef4444);
+}
+
+.service-icon.cost {
+  background: linear-gradient(135deg, #e9d5ff, #a855f7);
 }
 
 .roadmap {
@@ -1138,11 +1180,11 @@ h3 {
 }
 
 .metrics-panel {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .metric-card {
-  min-height: 210px;
+  min-height: 178px;
 }
 
 .metric-value {
@@ -1173,18 +1215,27 @@ h3 {
   background: var(--amber);
 }
 
+.metric-card:nth-child(5) .metric-value {
+  background: var(--cyan);
+}
+
+.metric-card:nth-child(6) .metric-value {
+  background: var(--red);
+}
+
 .review-checklist {
   display: grid;
-  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .review-checklist article {
   display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 14px;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
   align-items: center;
-  min-height: 72px;
-  padding: 16px;
+  min-height: 58px;
+  padding: 12px;
   color: #e5e7eb;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -1199,8 +1250,8 @@ h3 {
 .check-mark {
   position: relative;
   display: grid;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   place-items: center;
   background: rgba(34, 197, 94, 0.16);
   border: 1px solid rgba(34, 197, 94, 0.45);
@@ -1208,8 +1259,8 @@ h3 {
 }
 
 .check-mark::after {
-  width: 14px;
-  height: 8px;
+  width: 12px;
+  height: 7px;
   content: "";
   border-bottom: 3px solid #86efac;
   border-left: 3px solid #86efac;
@@ -1373,11 +1424,11 @@ h3 {
 
   .concept-grid,
   .metrics-panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .service-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 
@@ -1459,7 +1510,7 @@ h3 {
   }
 
   .trace-row {
-    min-width: 720px;
+    min-width: 920px;
   }
 
   .qa-row,
@@ -1501,6 +1552,10 @@ h3 {
 
   .progress-dots {
     display: none;
+  }
+
+  .review-checklist {
+    grid-template-columns: 1fr;
   }
 }
 
