@@ -1,0 +1,11 @@
+CAPTURAS QA SELECCIONADAS - NANU TECH V4
+
+Uso sugerido:
+1. En el cuerpo del informe, usar preferentemente 00_collage_figura_10_QA_V4.png como Figura 10.
+2. Si se prefiere no usar collage, insertar entre 4 y 6 capturas individuales de la carpeta 01_FIGURA_10_EVIDENCIAS_PRUEBAS.
+3. Las capturas 03, 04, 07 y 08 muestran errores o resultados mixtos; se deben describir como evidencia de validacion y limitaciones, no como aprobacion total.
+4. La captura 05 muestra un defecto de integracion API; usarla solo si se quiere evidenciar una incidencia concreta.
+5. El detalle completo de QA debe quedarse en anexos; el cuerpo del informe solo debe usar una seleccion resumida.
+
+Texto sugerido para nota de figura:
+Nota. Las capturas evidencian la gestion de pruebas mediante Klaros, la ejecucion de pruebas unitarias/funcionales y los resultados de validacion por sprint. Los resultados mixtos se interpretan como parte del proceso de aseguramiento de calidad y estabilizacion del MVP, no como aprobacion total del sistema.

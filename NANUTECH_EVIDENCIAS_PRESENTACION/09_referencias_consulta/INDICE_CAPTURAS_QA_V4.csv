@@ -1,0 +1,10 @@
+﻿archivo,ubicacion_sugerida,descripcion,uso_recomendado,observacion
+00_collage_figura_10_QA_V4.png,Figura 10,Collage recomendado para el cuerpo del informe,Insertar como figura principal si necesitas una sola imagen compuesta.,Alineado a V4
+01_klaros_sprint1_resultados_frontend_jest.png,Figura 10,Klaros - Sprint 1: resultados de pruebas frontend/Jest para NANUTECH,Usar para evidenciar gestión formal de pruebas y resultados aprobados del núcleo inicial.,Alineado a V4: fase de pruebas / QA
+02_matriz_pruebas_unitarias_sprint1_auth_jornadas.png,Figura 10,Matriz de pruebas unitarias Sprint 1: autenticación y jornadas,"Usar como evidencia de trazabilidad de casos, herramientas y estado aprobado.",Alineado a V4: fase de pruebas / QA
+03_klaros_sprint2_resultados_selenium_errores.png,Figura 10 / Discusión,Klaros - Sprint 2: resultados Selenium con errores,Usar para mostrar validación funcional web y limitaciones al ampliar el alcance.,Alineado a V4: fase de pruebas / QA
+04_klaros_sprint2_resultados_pgmem_errores.png,Figura 10 / Discusión,Klaros - Sprint 2: resultados pg-mem con errores,Usar para evidenciar pruebas de integración/datos y necesidad de estabilización.,Alineado a V4: fase de pruebas / QA
+05_defecto_integracion_api_jornadas_401.png,Figura 10 / Discusión,Defecto de integración API jornadas: respuesta 401,Usar solo si deseas mostrar un ejemplo de defecto técnico detectado en QA.,Alineado a V4: fase de pruebas / QA
+06_klaros_sprint3_hu20_perfil_conductor_casos.png,Figura 10,Klaros - Sprint 3: suite HU20 Perfil Conductor,Usar para evidenciar planificación/gestión de pruebas en módulo conductor.,Alineado a V4: fase de pruebas / QA
+07_klaros_sprint3_hu10_resultados_conductores.png,Figura 10 / Resultados,Klaros - Sprint 3: resultados HU10 Conductores,Usar para mostrar resultados mixtos: casos aprobados y errores.,Alineado a V4: fase de pruebas / QA
+08_klaros_sprint3_detalle_error_hu10.png,Figura 10 / Anexo,Detalle de error HU10 Conductores,Útil como evidencia de defecto puntual; mejor dejarlo en anexo si falta espacio.,Alineado a V4: fase de pruebas / QA

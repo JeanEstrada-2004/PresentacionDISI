@@ -1,772 +1,977 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NANU TECH | Presentacion DISI</title>
+  <title>NANU TECH | Defensa Final DISI</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="presentation-shell">
-    <aside class="sidebar" aria-label="Navegacion de diapositivas">
+    <header class="deck-header" aria-label="Informacion de la presentacion">
       <div class="brand-block">
         <div class="brand-mark" aria-hidden="true">NT</div>
         <div>
           <p class="brand-name">NANU TECH</p>
-          <p class="brand-subtitle">DISI</p>
+          <p class="brand-subtitle">Trabajo final DISI</p>
         </div>
       </div>
-      <nav class="slide-nav" id="slideNav" aria-label="Secciones"></nav>
-    </aside>
+      <div class="deck-status">
+        <span id="currentTitle">Portada</span>
+        <span id="slideCounter">1 / 28</span>
+      </div>
+    </header>
 
     <main class="stage" id="stage" aria-live="polite">
-      <section class="slide slide-cover active" id="slide-1" data-nav="Portada" data-title="NANU TECH y DISI">
+      <section class="slide slide-cover slide-fit active" id="slide-1" data-title="Portada" data-section="Inicio">
         <div class="grid-backdrop" aria-hidden="true"></div>
         <div class="slide-inner cover-layout">
           <div class="cover-copy reveal" style="--order: 1">
             <span class="eyebrow">Trabajo final de Diseño e Implementación de Sistemas</span>
-            <h1>Subsistema híbrido web-móvil para la gestión de jornada operativa</h1>
-            <p class="lead">La exposición presenta cómo se estructura el trabajo final de DISI a partir de un subsistema web-móvil evaluable, centrado en la trazabilidad de jornadas operativas y sustentado mediante SDLC, requerimientos, diseño, pruebas y despliegue.</p>
-            <div class="tag-row" aria-label="Palabras clave">
+            <h1 class="cover-title">Plataforma híbrida web-móvil para la gestión operativa de flota</h1>
+            <p class="project-subtitle">NANU TECH | Defensa final DISI</p>
+            <p class="lead">Solución orientada a pequeñas y medianas empresas de transporte de carga, integrando administración web, app móvil para el chofer, backend/API, auditoría, jornadas, alertas y soporte offline básico.</p>
+            <div class="tag-row" aria-label="Datos principales">
               <span class="tag">SDLC</span>
-              <span class="tag">MVP</span>
-              <span class="tag">Web-móvil</span>
-              <span class="tag">Jornada operativa</span>
-              <span class="tag">Alcance DISI</span>
+              <span class="tag">MVP operativo</span>
+              <span class="tag">Web + móvil</span>
+              <span class="tag">Backend/API</span>
+              <span class="tag">AWS preparado</span>
             </div>
           </div>
+          <div class="hero-dashboard reveal" style="--order: 2" aria-label="Resumen visual de plataforma web móvil backend">
+            <article>
+              <span class="badge badge-blue">Web</span>
+              <h3>Administración y gerencia</h3>
+              <p>Gestión de camiones, contratos, jornadas, alertas y auditoría.</p>
+            </article>
+            <article>
+              <span class="badge badge-green">App móvil</span>
+              <h3>Operación del chofer</h3>
+              <p>Jornada asignada, inicio, cierre, observaciones y auxilio.</p>
+            </article>
+            <article>
+              <span class="badge badge-purple">Backend/API</span>
+              <h3>Reglas y seguridad</h3>
+              <p>Roles, permisos, servicios, persistencia y trazabilidad.</p>
+            </article>
+            <article>
+              <span class="badge badge-amber">Operación</span>
+              <h3>Validación y soporte</h3>
+              <p>Pruebas, costos, despliegue preparado y mantenimiento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-          <div class="cover-visual reveal" style="--order: 2" role="img" aria-label="Tarjetas de analisis, diseno, implementacion y pruebas alrededor de una unidad operativa">
-            <div class="vehicle-mark">
-              <span class="truck-box"></span>
-              <span class="truck-cab"></span>
-              <span class="truck-wheel wheel-a"></span>
-              <span class="truck-wheel wheel-b"></span>
+      <section class="slide slide-fit" id="slide-objetivos" data-title="Objetivos y alcance" data-section="Inicio">
+        <div class="slide-inner objectives-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Defensa académica</span>
+            <h2>Objetivos y alcance del trabajo</h2>
+            <p class="lead">El trabajo demuestra el ciclo completo de diseño e implementación de un MVP operativo: análisis, diseño, construcción, validación y preparación para operación.</p>
+            <div class="goal-card">
+              <span class="artifact-chip">Objetivo general</span>
+              <p>Diseñar e implementar NANU TECH como una plataforma híbrida web-móvil para centralizar la gestión operativa de flota, conectando administración, gerencia, choferes, datos y servicios backend.</p>
             </div>
-            <div class="floating-card card-a">
-              <span>Análisis</span>
-              <strong>Problema</strong>
+          </div>
+          <div class="objective-grid reveal" style="--order: 2" aria-label="Objetivos específicos del proyecto">
+            <article><span>01</span><strong>Análisis</strong><p>Problema, actores, alcance, riesgos, costos y requerimientos.</p></article>
+            <article><span>02</span><strong>Diseño</strong><p>UX, arquitectura, modelo de datos, seguridad y sincronización.</p></article>
+            <article><span>03</span><strong>Construcción</strong><p>Web, app móvil, backend/API, PostgreSQL y auditoría.</p></article>
+            <article><span>04</span><strong>Validación</strong><p>Pruebas funcionales, integración, QA y evidencias.</p></article>
+          </div>
+          <div class="scope-strip reveal" style="--order: 3" aria-label="Alcance defendible del MVP">
+            <div>
+              <strong>Incluye</strong>
+              <span>Web admin</span>
+              <span>Web gerencial</span>
+              <span>App móvil chofer</span>
+              <span>Backend/API</span>
+              <span>Jornadas</span>
+              <span>Contratos</span>
+              <span>Camiones</span>
+              <span>Alertas</span>
+              <span>Auditoría</span>
+              <span>Offline básico</span>
             </div>
-            <div class="floating-card card-b">
-              <span>Diseño</span>
-              <strong>Arquitectura</strong>
-            </div>
-            <div class="floating-card card-c">
-              <span>Implementación</span>
-              <strong>Flujo central</strong>
-            </div>
-            <div class="floating-card card-d">
-              <span>Pruebas</span>
-              <strong>Validación</strong>
+            <div>
+              <strong>Excluye</strong>
+              <span>GPS real-time</span>
+              <span>Combustible</span>
+              <span>Facturación</span>
+              <span>Push</span>
+              <span>Producción AWS garantizada</span>
             </div>
           </div>
         </div>
-        <template class="speaker-note">Ubicar al docente en el alcance: NANU TECH se toma como contexto, pero el trabajo DISI se centra en el subsistema de jornadas operativas y no en toda la plataforma de flota.</template>
       </section>
 
-      <section class="slide" id="slide-2" data-nav="Ruta" data-title="Ruta de exposición">
+      <section class="slide slide-fit" id="slide-2" data-title="Contexto del problema" data-section="Problema">
         <div class="slide-inner two-column">
           <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">Estructura del trabajo final</span>
-            <h2>Ruta de exposición</h2>
-            <p class="lead">La exposición seguirá la misma lógica del trabajo final: primero se justifica la idea TIC, luego se demuestra cómo el análisis se transforma en diseño, implementación, validación y operación del sistema.</p>
+            <span class="eyebrow">Transporte de carga</span>
+            <h2>Contexto del problema</h2>
+            <p class="lead">En operaciones de transporte de carga, la gestión diaria depende de la coordinación entre oficina, gerencia y choferes en ruta.</p>
             <ul class="key-list">
-              <li>Problema, Canvas e idea TIC como base del enfoque.</li>
-              <li>Marco teórico, metodología y SDLC como hilo conductor.</li>
-              <li>Análisis, requerimientos, priorización y trazabilidad.</li>
-              <li>Diseño, implementación, pruebas, despliegue, costos y mantenimiento.</li>
+              <li>Camiones, contratos, conductores, jornadas y alertas se gestionan como piezas operativas conectadas.</li>
+              <li>Cuando cada dato vive por separado, se pierde continuidad entre planificación, ejecución y seguimiento.</li>
+              <li>La oficina necesita consultar eventos de campo sin depender de registros manuales o comunicación informal.</li>
             </ul>
           </div>
-          <div class="timeline-map reveal" style="--order: 2" role="img" aria-label="Mapa de la ruta de exposicion">
-            <div class="map-node danger"><strong>Problema</strong><small>AS-IS / TO-BE</small></div>
-            <div class="map-node primary"><strong>Idea TIC</strong><small>Canvas</small></div>
-            <div class="map-node purple"><strong>SDLC</strong><small>Fases y método</small></div>
-            <div class="map-node primary"><strong>Análisis</strong><small>HU / RF / RNF</small></div>
-            <div class="map-node amber"><strong>Prioridad</strong><small>MoSCoW</small></div>
-            <div class="map-node primary"><strong>Diseño</strong><small>Figma / C4 / UML / DER</small></div>
-            <div class="map-node primary"><strong>Implementación</strong><small>Web / móvil / endpoints</small></div>
-            <div class="map-node green"><strong>Pruebas</strong><small>QA y trazabilidad</small></div>
-            <div class="map-node amber"><strong>Operación</strong><small>Cloud y costos</small></div>
-            <div class="map-node purple"><strong>Evolución</strong><small>Mantenimiento</small></div>
+          <div class="evidence-board reveal" style="--order: 2">
+            <div class="ops-map" aria-label="Mapa visual oficina campo">
+              <article><strong>Oficina</strong><span>Administra camiones, contratos, jornadas y conductores.</span></article>
+              <article><strong>Campo</strong><span>El chofer registra turno, observaciones, incidencias y alertas.</span></article>
+              <article><strong>Backend/API</strong><span>Centraliza reglas, permisos, servicios y auditoría.</span></article>
+              <article><strong>Datos</strong><span>Consolida jornadas, contratos, alertas, unidades, usuarios y trazabilidad.</span></article>
+            </div>
+            <article class="diagnosis-band">
+              <span class="artifact-chip">Diagnóstico</span>
+              <p>El problema central es la desconexión entre administración web, operación móvil del chofer y datos consolidados.</p>
+            </article>
           </div>
         </div>
-        <template class="speaker-note">Explicar que la presentación no es una demostración aislada de pantallas, sino una defensa ordenada de las secciones, artefactos y evidencias del trabajo final.</template>
       </section>
 
-      <section class="slide" id="slide-3" data-nav="Problema" data-title="Problema operativo identificado">
+      <section class="slide slide-fit" id="slide-3" data-title="Problemática operativa" data-section="Problema">
         <div class="slide-inner split-visual">
           <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">Necesidad que justifica la solución</span>
-            <h2>Problema operativo identificado</h2>
-            <p class="lead">En esta sección se presentará el diagnóstico operativo inicial, mostrando cómo el registro fragmentado de jornadas genera baja trazabilidad, validación tardía y menor visibilidad para la gestión.</p>
-            <div class="artifact-strip" aria-label="Artefacto de la seccion">
-              <span class="artifact-chip">Artefacto: diagnóstico AS-IS del flujo de jornada</span>
-            </div>
+            <span class="eyebrow">Brecha operativa</span>
+            <h2>Problemática operativa</h2>
+            <p class="lead">Camiones, contratos, conductores, jornadas y alertas administrados de forma aislada generan pérdida de información, baja visibilidad y dificultad para responder a eventos de campo.</p>
             <ul class="key-list">
-              <li>Situación actual del registro de jornadas y sus puntos de fricción.</li>
-              <li>Dificultad para validar inicio, fin, unidad, conductor y contrato.</li>
-              <li>Observaciones operativas dispersas y trazabilidad limitada.</li>
-              <li>Impacto en administración, seguimiento y toma de decisiones.</li>
+              <li>La problemática evidencia una brecha entre lo que ocurre en ruta y lo que la oficina puede validar.</li>
+              <li>La solución necesita conectar oficina, campo, API y datos en un flujo trazable.</li>
             </ul>
+            <div class="need-callout">Necesidad: una plataforma web-móvil que conecte oficina, campo, API y datos en un flujo trazable.</div>
           </div>
           <div class="alert-grid reveal" style="--order: 2">
             <article class="alert-card red">
               <span class="status-dot"></span>
-              <h3>Registro fragmentado</h3>
-              <p>El AS-IS mostrará dónde se pierde continuidad entre jornada, unidad, conductor y contrato.</p>
+              <h3>Pérdida de trazabilidad</h3>
+              <p>Eventos de jornada, observaciones y alertas no quedan centralizados de forma confiable.</p>
             </article>
             <article class="alert-card amber">
               <span class="status-dot"></span>
-              <h3>Validación tardía</h3>
-              <p>Inicio, cierre y observaciones requieren criterios claros para confirmar la operación.</p>
+              <h3>Baja visibilidad operativa</h3>
+              <p>Administración y gerencia no cuentan con estado consolidado de flota, contratos y jornadas.</p>
             </article>
             <article class="alert-card purple">
               <span class="status-dot"></span>
-              <h3>Brecha operativa</h3>
-              <p>La propuesta conectará diagnóstico, actores y reglas de negocio del subsistema.</p>
+              <h3>Chofer sin canal formal</h3>
+              <p>Inicio, fin, observaciones y auxilio dependen de comunicación informal o procesos manuales.</p>
+            </article>
+            <article class="alert-card blue">
+              <span class="status-dot"></span>
+              <h3>Auditoría débil</h3>
+              <p>Sin historial integrado, es difícil revisar accesos, acciones críticas e incidencias atendidas.</p>
             </article>
           </div>
         </div>
-        <template class="speaker-note">El problema debe conectar directamente con el sistema propuesto: del AS-IS se obtiene la brecha que luego se convierte en requerimientos verificables.</template>
       </section>
 
-      <section class="slide" id="slide-4" data-nav="Idea TIC" data-title="Idea TIC seleccionada">
-        <div class="slide-inner two-column">
-          <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">Núcleo funcional evaluable</span>
-            <h2>Idea TIC seleccionada</h2>
-            <p class="lead">La idea TIC se justificará mediante un Canvas resumido, donde se explicará el problema, los usuarios, la propuesta de valor, la solución web-móvil y el beneficio operativo para la trazabilidad de jornadas.</p>
-            <div class="artifact-strip" aria-label="Artefacto de la seccion">
-              <span class="artifact-chip">Artefacto: Canvas o Lean Canvas de la idea TIC</span>
-            </div>
-            <ul class="key-list">
-              <li>Web: administración, consulta, seguimiento y validación.</li>
-              <li>Móvil: operación del chofer, inicio, cierre y observaciones.</li>
-              <li>Backend: reglas, datos, seguridad y trazabilidad compartida.</li>
-              <li>El subsistema elegido permite evaluar un núcleo funcional dentro de NANU TECH.</li>
-            </ul>
+      <section class="slide slide-fit" id="slide-4" data-title="Segmento objetivo" data-section="Usuarios">
+        <div class="slide-inner segment-layout">
+          <div class="center-copy reveal" style="--order: 1">
+            <span class="eyebrow">Mercado y usuarios</span>
+            <h2>Segmento objetivo y usuarios del sistema</h2>
+            <p class="lead">NANU TECH se orienta a pequeñas y medianas empresas de transporte de carga con flotas propias o asignadas, que requieren trazabilidad operativa sin depender de telemetría empresarial avanzada.</p>
           </div>
-          <div class="system-diagram reveal" style="--order: 2" role="img" aria-label="Diagrama de bloques web movil y backend">
-            <div class="diagram-block web">
-              <span class="block-icon monitor-icon"></span>
-              <h3>Web</h3>
-              <p>Gestión y seguimiento</p>
-            </div>
-            <div class="diagram-line"></div>
-            <div class="diagram-block backend">
-              <span class="block-icon api-icon"></span>
-              <h3>Backend</h3>
-              <p>Núcleo técnico compartido</p>
-            </div>
-            <div class="diagram-line"></div>
-            <div class="diagram-block mobile">
-              <span class="block-icon phone-icon"></span>
-              <h3>Móvil</h3>
-              <p>Operación del chofer</p>
-            </div>
+          <div class="persona-grid persona-grid-detailed reveal" style="--order: 2">
+            <article class="persona-card">
+              <span class="badge badge-blue">Empresa</span>
+              <h3>PYME de transporte</h3>
+              <p>Opera flotas propias o asignadas y necesita trazabilidad sin alto costo de telemetría.</p>
+            </article>
+            <article class="persona-card">
+              <span class="badge badge-purple">Administración</span>
+              <h3>Control operativo</h3>
+              <p>Gestiona camiones, jornadas, conductores, alertas y auditoría desde un canal web centralizado.</p>
+            </article>
+            <article class="persona-card">
+              <span class="badge badge-amber">Gerencia</span>
+              <h3>Decisión y seguimiento</h3>
+              <p>Consulta contratos, indicadores, seguimiento e historial para tomar decisiones resumidas.</p>
+            </article>
+            <article class="persona-card">
+              <span class="badge badge-green">Chofer en campo</span>
+              <h3>Operación móvil</h3>
+              <p>Usa la app móvil para jornada, observaciones, SOS/auxilio y eventos offline controlados.</p>
+            </article>
+          </div>
+          <div class="secondary-note reveal" style="--order: 3">
+            <span class="artifact-chip">Canal secundario</span>
+            <p>El panel web del chofer funciona como respaldo de consulta o contingencia; no reemplaza la app móvil como canal principal de campo.</p>
           </div>
         </div>
-        <template class="speaker-note">Reforzar que el Canvas justifica la idea desde negocio antes de pasar al diseño técnico; web, móvil y backend se presentan como partes integradas del mismo flujo.</template>
       </section>
 
-      <section class="slide" id="slide-5" data-nav="MVP" data-title="Alcance del MVP">
+      <section class="slide slide-fit" id="slide-justificacion" data-title="Justificación del proyecto" data-section="Problema">
+        <div class="slide-inner justification-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Valor académico y operativo</span>
+            <h2>Justificación del proyecto</h2>
+            <p class="lead">NANU TECH se justifica porque conecta eventos de campo con registros administrativos y evidencia el ciclo completo de diseño e implementación de un sistema de información.</p>
+            <div class="normative-note">
+              <span class="artifact-chip">Contexto MTC/SUTRAN</span>
+              <p>La referencia normativa refuerza la importancia de registrar jornadas y operaciones; no convierte al MVP en certificación legal completa.</p>
+            </div>
+          </div>
+          <div class="justification-grid justification-grid-strong reveal" style="--order: 2">
+            <article>
+              <span class="artifact-chip">Operativo</span>
+              <strong>Valor operativo</strong>
+              <p>Centraliza camiones, contratos, jornadas, alertas y conductores, reduciendo dispersión de información.</p>
+            </article>
+            <article>
+              <span class="artifact-chip">DISI</span>
+              <strong>Valor académico</strong>
+              <p>Aplica SDLC completo: análisis, diseño, implementación, pruebas, despliegue y mantenimiento.</p>
+            </article>
+            <article>
+              <span class="artifact-chip">Técnico</span>
+              <strong>Valor técnico</strong>
+              <p>Integra web, app móvil, backend/API, PostgreSQL, seguridad y sincronización básica por canal y rol.</p>
+            </article>
+            <article>
+              <span class="artifact-chip">Trazabilidad</span>
+              <strong>Registro auditable</strong>
+              <p>Asocia acciones críticas a usuario, rol, módulo, fecha, estado y evidencia operativa.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-5" data-title="Idea TIC y Lean Canvas" data-section="Idea TIC">
+        <div class="slide-inner canvas-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Idea TIC</span>
+            <h2>Idea TIC y Lean Canvas</h2>
+            <p class="lead">La idea TIC de NANU TECH centraliza la gestión operativa de flota mediante una solución web-móvil con backend/API, auditoría y soporte offline básico para el chofer.</p>
+            <ul class="key-list">
+              <li>Propuesta de valor: trazabilidad operativa web-móvil para pymes de carga.</li>
+              <li>Usuarios clave: administrador, gerente y chofer en campo.</li>
+              <li>Solución: web administrativa, app móvil, backend/API y auditoría.</li>
+              <li>Diferenciación: MVP operativo sin depender de GPS real-time ni hardware especializado.</li>
+            </ul>
+            <div class="canvas-chips" aria-label="Lectura resumida del Lean Canvas">
+              <span><strong>Problema</strong> información operativa dispersa</span>
+              <span><strong>Valor</strong> trazabilidad web-móvil</span>
+              <span><strong>Diferencia</strong> offline básico y auditoría</span>
+            </div>
+          </div>
+          <figure class="evidence-figure canvas-figure reveal" style="--order: 2">
+            <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/01_canvas/01_lean_canvas_nanutech.png" alt="Lean Canvas de NANU TECH">
+            <figcaption>Lean Canvas: síntesis de problema, usuarios, propuesta de valor, solución y diferenciación del MVP.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-6" data-title="Benchmark de soluciones" data-section="Benchmark">
         <div class="slide-inner">
           <div class="center-copy reveal" style="--order: 1">
-            <span class="eyebrow">Priorización realista</span>
-            <h2>Alcance del MVP</h2>
-            <p class="lead">El alcance del MVP se explicará mediante una priorización MoSCoW, separando funcionalidades obligatorias, funciones de soporte y extensiones futuras para evitar dispersar el proyecto.</p>
-            <div class="artifact-strip centered" aria-label="Artefacto de la seccion">
-              <span class="artifact-chip">Artefacto: matriz MoSCoW de priorización</span>
+            <span class="eyebrow">Benchmark</span>
+            <h2>Benchmark de soluciones existentes</h2>
+            <p class="lead">NANU TECH no compite como plataforma empresarial de telemetría; se diferencia por priorizar un MVP operativo web-móvil para pymes, sin depender de hardware GPS ni integraciones complejas.</p>
+          </div>
+          <div class="comparison-table benchmark-table reveal" style="--order: 2" role="table" aria-label="Comparación de soluciones existentes">
+            <div class="table-row table-head" role="row">
+              <span role="columnheader">Solución</span>
+              <span role="columnheader">Enfoque principal</span>
+              <span role="columnheader">Brecha para pymes</span>
+              <span role="columnheader">Diferenciación NANU TECH</span>
+            </div>
+            <div class="table-row" role="row">
+              <span>Samsara</span><span>Telemetría, seguridad y operación conectada.</span><span>Alto costo y ecosistema avanzado.</span><span>MVP operativo sin GPS real-time.</span>
+            </div>
+            <div class="table-row" role="row">
+              <span>Geotab</span><span>GPS, datos vehiculares y telemática.</span><span>Requiere hardware e integración especializada.</span><span>Gestión web-móvil accesible.</span>
+            </div>
+            <div class="table-row" role="row">
+              <span>Fleetio</span><span>Gestión de flota, mantenimiento y operaciones.</span><span>Mayor amplitud funcional que el MVP.</span><span>Foco en jornadas, contratos y trazabilidad.</span>
+            </div>
+            <div class="table-row" role="row">
+              <span>Motive</span><span>Seguridad, productividad y gestión de flota.</span><span>Orientación empresarial.</span><span>Offline básico y auditoría académica.</span>
             </div>
           </div>
-          <div class="scope-matrix reveal" style="--order: 2">
+          <div class="benchmark-conclusion reveal" style="--order: 3">
+            <span class="artifact-chip">Conclusión</span>
+            <p>NANU TECH se ubica como una solución académica y operativa enfocada en trazabilidad, no como telemetría empresarial avanzada.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-7" data-title="Propuesta de valor" data-section="Valor">
+        <div class="slide-inner value-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Valor del sistema</span>
+            <h2>Propuesta de valor y diferenciación</h2>
+            <p class="lead">NANU TECH centraliza la operación de flota conectando administración web, gerencia, app móvil del chofer, backend/API, auditoría y sincronización básica en un flujo trazable.</p>
+            <ul class="key-list">
+              <li>Aporta trazabilidad operativa web-móvil para pymes de transporte.</li>
+              <li>Integra eventos de campo con gestión administrativa y auditoría.</li>
+              <li>No depende de GPS real-time ni hardware especializado.</li>
+            </ul>
+          </div>
+          <div class="value-chain reveal" style="--order: 2" aria-label="Cadena de valor NANU TECH">
+            <article>
+              <span class="badge badge-blue">01</span>
+              <h3>Operación de flota</h3>
+              <p>Centraliza camiones, contratos, conductores y jornadas para reducir dispersión operativa.</p>
+            </article>
+            <article>
+              <span class="badge badge-green">02</span>
+              <h3>Registro móvil</h3>
+              <p>El chofer registra inicio, fin, observaciones, SOS y auxilio desde campo, incluso con conectividad limitada.</p>
+            </article>
+            <article>
+              <span class="badge badge-purple">03</span>
+              <h3>Gestión web</h3>
+              <p>Administración y gerencia consultan jornadas, contratos, alertas y auditoría para supervisión operativa.</p>
+            </article>
+            <article>
+              <span class="badge badge-amber">04</span>
+              <h3>Trazabilidad</h3>
+              <p>Cada acción queda asociada a usuario, rol, módulo, fecha, estado y evidencia.</p>
+            </article>
+          </div>
+          <div class="value-difference reveal" style="--order: 3">
+            <span class="artifact-chip">Diferenciación</span>
+            <p>MVP operativo web-móvil para pymes, con auditoría y offline básico, sin depender de GPS real-time ni hardware especializado.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-8" data-title="Alcance del MVP" data-section="MVP">
+        <div class="slide-inner">
+          <div class="center-copy reveal" style="--order: 1">
+            <span class="eyebrow">Delimitación</span>
+            <h2>Alcance del MVP: incluido, excluido y futuro</h2>
+            <p class="lead">El MVP se concentra en el núcleo operativo defendible y excluye capacidades avanzadas que requieren otra escala técnica o empresarial.</p>
+          </div>
+          <div class="scope-matrix scope-matrix-dense reveal" style="--order: 2">
             <article class="scope-column included">
-              <div class="column-header">
-                <span class="badge badge-green">MVP</span>
-                <h3>Incluido</h3>
-              </div>
+              <span class="badge badge-green">Incluido</span>
+              <h3>MVP operativo</h3>
               <ul>
-                <li>Registro de jornada</li>
-                <li>Inicio y fin de turno</li>
-                <li>Observaciones operativas</li>
-                <li>Seguimiento básico</li>
-                <li>Estados de jornada</li>
+                <li>Web administrativa y web gerencial</li>
+                <li>App móvil del chofer y panel web de respaldo</li>
+                <li>Backend/API, PostgreSQL, roles y auditoría</li>
+                <li>Camiones básicos, contratos, jornadas y observaciones</li>
+                <li>Alertas/SOS/auxilio</li>
+                <li>Offline básico con sincronización posterior controlada</li>
               </ul>
             </article>
-            <article class="scope-column support">
-              <div class="column-header">
-                <span class="badge badge-blue">Soporte</span>
-                <h3>Funcional</h3>
-              </div>
+            <article class="scope-column excluded">
+              <span class="badge badge-amber">Excluido</span>
+              <h3>Fuera del MVP</h3>
               <ul>
-                <li>Conductor, unidad y contrato</li>
-                <li>Auditoría básica</li>
-                <li>Validación administrativa</li>
-                <li>Consulta web</li>
+                <li>GPS real-time y tracking en mapa vivo</li>
+                <li>Combustible, facturación y mantenimiento avanzado</li>
+                <li>Push notifications, BI avanzado y publicación en tiendas móviles</li>
+                <li>Producción AWS estable garantizada</li>
               </ul>
             </article>
             <article class="scope-column future">
-              <div class="column-header">
-                <span class="badge badge-purple">Evolución</span>
-                <h3>Futura</h3>
-              </div>
+              <span class="badge badge-purple">Futuro</span>
+              <h3>Evolución</h3>
               <ul>
-                <li>GPS avanzado</li>
-                <li>Combustible</li>
-                <li>Alertas complejas</li>
-                <li>Dashboard gerencial</li>
-                <li>Analítica avanzada</li>
+                <li>Proveedor GPS externo y telemetría</li>
+                <li>Analítica gerencial avanzada</li>
+                <li>Integraciones empresariales</li>
+                <li>Escalamiento cloud productivo</li>
+                <li>Offline robusto de producción</li>
               </ul>
             </article>
           </div>
+          <div class="scope-closure reveal" style="--order: 3">
+            <span class="artifact-chip">Criterio de defensa</span>
+            <p>Todo lo incluido debe poder explicarse, evidenciarse o defenderse como parte del flujo operativo mínimo.</p>
+          </div>
         </div>
-        <template class="speaker-note">Defender por qué el trabajo DISI no cubre toda la plataforma NANU TECH: el MVP prioriza un flujo completo, viable y verificable.</template>
       </section>
 
-      <section class="slide" id="slide-6" data-nav="Teoría" data-title="Marco teórico aplicado">
+      <section class="slide slide-fit" id="slide-dimensionamiento" data-title="Supuestos de dimensionamiento" data-section="MVP">
         <div class="slide-inner">
           <div class="center-copy reveal" style="--order: 1">
-            <span class="eyebrow">Teoría como soporte de decisiones</span>
-            <h2>Marco teórico aplicado</h2>
-            <p class="lead">El marco teórico no se presentará como definiciones aisladas, sino como soporte para decisiones del proyecto: alcance, requerimientos, arquitectura, pruebas, despliegue y evolución.</p>
-            <div class="artifact-strip centered" aria-label="Artefactos de la seccion">
-              <span class="artifact-chip">SDLC</span>
-              <span class="artifact-chip">Canvas</span>
-              <span class="artifact-chip">MoSCoW</span>
-              <span class="artifact-chip">Pruebas</span>
-              <span class="artifact-chip">Mantenimiento</span>
+            <span class="eyebrow">Escenario académico</span>
+            <h2>Supuestos de dimensionamiento</h2>
+            <p class="lead">Los valores referenciales permiten estimar carga, costos, capacitación y mantenimiento sin afirmar una implantación comercial real.</p>
+          </div>
+          <div class="dimension-grid dimension-grid-strong reveal" style="--order: 2" aria-label="Supuestos de dimensionamiento del MVP">
+            <article><span class="metric-value">20</span><strong>Camiones iniciales</strong><p>Base para registros, contratos, jornadas y pruebas de flota.</p></article>
+            <article><span class="metric-value">30</span><strong>Choferes activos</strong><p>Escenario para validar usuarios móviles, capacitación y operación diaria.</p></article>
+            <article><span class="metric-value">600</span><strong>Jornadas mensuales</strong><p>Referencia para volumen de datos, auditoría y sincronización.</p></article>
+            <article><span class="metric-value">3</span><strong>Meses de soporte</strong><p>Periodo inicial de estabilización, corrección y mantenimiento.</p></article>
+          </div>
+          <div class="dimension-rationale reveal" style="--order: 3">
+            <article>
+              <span class="artifact-chip">Criterio académico</span>
+              <p>Estos supuestos justifican estimación de costos, validación funcional, dimensionamiento de datos, capacitación por rol y mantenimiento inicial del MVP.</p>
+            </article>
+            <div class="dimension-links" aria-label="Relación de supuestos con decisiones del proyecto">
+              <span>Carga operativa → jornadas y datos</span>
+              <span>Costo → desarrollo, cloud y mantenimiento</span>
+              <span>Capacitación → administrador, gerente y chofer</span>
+              <span>Pruebas → flujos web-móvil-backend</span>
             </div>
           </div>
-          <div class="concept-grid reveal" style="--order: 2">
-            <article class="concept-card">
-              <span class="badge badge-blue">SDLC</span>
-              <h3>Ciclo de vida</h3>
-              <p>Ordena problema, análisis, diseño, construcción, pruebas y operación.</p>
-            </article>
-            <article class="concept-card">
-              <span class="badge badge-green">TIC</span>
-              <h3>Idea y Canvas</h3>
-              <p>Justifica usuarios, valor, solución y alcance de negocio.</p>
-            </article>
-            <article class="concept-card">
-              <span class="badge badge-amber">Req.</span>
-              <h3>Requerimientos</h3>
-              <p>Conecta HU, RF, RNF, reglas, criterios y pruebas.</p>
-            </article>
-            <article class="concept-card">
-              <span class="badge badge-purple">QA</span>
-              <h3>Arquitectura, UX y pruebas</h3>
-              <p>Sostiene prototipos, capas, C4/UML, DER y QA.</p>
-            </article>
-            <article class="concept-card">
-              <span class="badge badge-blue">Ops</span>
-              <h3>Despliegue y mantenimiento</h3>
-              <p>Ubica costos, monitoreo, control de cambios y evolución.</p>
-            </article>
-          </div>
         </div>
-        <template class="speaker-note">Cada concepto teórico debe vincularse con una decisión real del trabajo: qué se prioriza, cómo se diseña, cómo se prueba y cómo se mantiene.</template>
       </section>
 
-      <section class="slide" id="slide-7" data-nav="Metodología" data-title="Metodología de trabajo">
-        <div class="slide-inner two-column">
+      <section class="slide slide-fit" id="slide-9" data-title="Actores y canales" data-section="Sistema">
+        <div class="slide-inner actors-layout">
           <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">Procedimiento aplicado</span>
-            <h2>Metodología de trabajo</h2>
-            <p class="lead">La metodología mostrará cómo se pasó de la revisión documental y el análisis del problema hacia artefactos concretos: Canvas, requerimientos, priorización, diseño, implementación, pruebas y despliegue.</p>
-            <div class="artifact-strip" aria-label="Artefacto de la seccion">
-              <span class="artifact-chip">Artefacto: tabla metodológica por fase, actividad y producto</span>
+            <span class="eyebrow">Responsabilidades</span>
+            <h2>Actores y canales del sistema</h2>
+            <p class="lead">NANU TECH separa responsabilidades por rol y canal. La web concentra administración y gerencia; la app móvil concentra la operación del chofer; el backend/API sostiene reglas, datos, permisos y auditoría.</p>
+            <div class="actor-card-grid" aria-label="Matriz resumida de actores y canales">
+              <article><span class="badge badge-blue">Administrador web</span><p>Gestiona camiones, jornadas, alertas, auditoría y conductores.</p></article>
+              <article><span class="badge badge-purple">Gerente web</span><p>Consulta dashboard, contratos, asignaciones e historial operativo.</p></article>
+              <article><span class="badge badge-green">Chofer móvil</span><p>Canal principal para jornada, inicio/fin, observaciones, SOS/auxilio y offline básico.</p></article>
+              <article><span class="badge badge-amber">Chofer web</span><p>Canal secundario para consulta, respaldo o contingencia.</p></article>
+              <article><span class="badge badge-blue">Backend/API</span><p>Soporte común de roles, reglas, persistencia y trazabilidad; no es actor de negocio.</p></article>
             </div>
-            <ul class="key-list">
-              <li>Enfoque aplicado, tecnológico y descriptivo.</li>
-              <li>Diagnóstico AS-IS/TO-BE, actores y flujo de jornada.</li>
-              <li>HU, RF, RNF, reglas y priorización MoSCoW.</li>
-              <li>Diseño UX/arquitectura, implementación, pruebas, costos y mantenimiento.</li>
-            </ul>
           </div>
-          <div class="phase-ladder reveal" style="--order: 2" role="img" aria-label="Fases metodologicas del proyecto">
-            <div class="phase-step"><span>01</span> Revisión y diagnóstico</div>
-            <div class="phase-step"><span>02</span> Análisis y requerimientos</div>
-            <div class="phase-step"><span>03</span> Diseño UX y arquitectura</div>
-            <div class="phase-step"><span>04</span> Implementación integrada</div>
-            <div class="phase-step"><span>05</span> Validación y despliegue</div>
-            <div class="phase-step"><span>06</span> Costos y mantenimiento</div>
-          </div>
+          <figure class="evidence-figure actors-figure reveal" style="--order: 2">
+            <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/02_vista_roles_modulos.png" alt="Vista de roles y módulos del MVP NANU TECH">
+            <figcaption>Evidencia de análisis: roles, canales y módulos del MVP. La separación evita confundir backend con actor funcional y evita presentar al chofer web como canal principal de campo.</figcaption>
+          </figure>
         </div>
-        <template class="speaker-note">Explicar que SDLC será el hilo conductor, adaptado a un enfoque ágil-incremental para ordenar actividades, productos y evidencias.</template>
       </section>
 
-      <section class="slide" id="slide-8" data-nav="Análisis" data-title="Análisis del sistema">
-        <div class="slide-inner split-visual">
-          <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">Base de requerimientos</span>
-            <h2>Análisis del sistema</h2>
-            <p class="lead">En análisis se explicará cómo el problema se convierte en requerimientos verificables, identificando actores, flujos, reglas, estados y criterios que luego serán diseñados, implementados y probados.</p>
-            <div class="artifact-strip" aria-label="Artefactos de la seccion">
-              <span class="artifact-chip">AS-IS / TO-BE</span>
-              <span class="artifact-chip">HU / RF / RNF</span>
-              <span class="artifact-chip">Reglas y estados</span>
-            </div>
-            <ul class="key-list">
-              <li>AS-IS y TO-BE del flujo de jornada operativa.</li>
-              <li>Actores, responsabilidades, casos de uso e historias seleccionadas.</li>
-              <li>Requerimientos funcionales, no funcionales y reglas de negocio.</li>
-              <li>Estados de jornada y matriz de trazabilidad inicial.</li>
-            </ul>
+      <section class="slide slide-fit" id="slide-10" data-title="SDLC aplicado" data-section="SDLC">
+        <div class="slide-inner sdlc-layout">
+          <div class="center-copy reveal" style="--order: 1">
+            <span class="eyebrow">Ciclo de vida</span>
+            <h2>SDLC aplicado al proyecto</h2>
+            <p class="lead">El enfoque ágil-incremental ordenó el ciclo de vida completo sin perder control del alcance del MVP.</p>
           </div>
-          <div class="analysis-table reveal" style="--order: 2" role="table" aria-label="Panel compacto de analisis">
-            <div class="table-row table-head" role="row">
-              <span role="columnheader">Eje</span>
-              <span role="columnheader">Artefacto</span>
-              <span role="columnheader">Salida</span>
-            </div>
-            <div class="table-row" role="row">
-              <span>Proceso</span>
-              <span>AS-IS y TO-BE</span>
-              <span>Brecha operativa</span>
-            </div>
-            <div class="table-row" role="row">
-              <span>Actores</span>
-              <span>Matriz de roles</span>
-              <span>Responsabilidades</span>
-            </div>
-            <div class="table-row" role="row">
-              <span>Requerimientos</span>
-              <span>HU, RF, RNF</span>
-              <span>Alcance funcional</span>
-            </div>
-            <div class="table-row" role="row">
-              <span>Reglas</span>
-              <span>RN y estados</span>
-              <span>Criterios de validación</span>
-            </div>
+          <div class="sdlc-timeline reveal" style="--order: 2" aria-label="Linea SDLC aplicada">
+            <article><span>01</span><strong>Análisis</strong><p>Problema, segmento, actores, alcance, riesgos, costos y requerimientos.</p></article>
+            <article><span>02</span><strong>Diseño</strong><p>UX, arquitectura, DER, seguridad, roles y sincronización.</p></article>
+            <article><span>03</span><strong>Implementación</strong><p>Web, Flutter móvil, API, PostgreSQL y auditoría.</p></article>
+            <article><span>04</span><strong>Pruebas</strong><p>Funcionales, integración, roles, app móvil y offline/sync.</p></article>
+            <article><span>05</span><strong>Operación</strong><p>Despliegue local/testing/cloud inicial, costos, capacitación y mantenimiento.</p></article>
           </div>
+          <figure class="evidence-figure sdlc-evidence reveal" style="--order: 3">
+            <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/08_ciclo_vida_jornada.png" alt="Ciclo de vida de jornada en el MVP">
+            <figcaption>Evidencia: ciclo operativo de jornada usado para conectar análisis, diseño, implementación y pruebas.</figcaption>
+          </figure>
         </div>
-        <template class="speaker-note">Reforzar que análisis no es solo describir el problema: convierte la brecha operativa en requerimientos, reglas y estados verificables.</template>
       </section>
 
-      <section class="slide" id="slide-9" data-nav="Trazabilidad" data-title="Priorización y trazabilidad">
+      <section class="slide slide-fit" id="slide-metodologia" data-title="Metodología y fuentes" data-section="SDLC">
         <div class="slide-inner">
+          <div class="center-copy reveal" style="--order: 1">
+            <span class="eyebrow">Procedimiento aplicado</span>
+            <h2>Metodología y fuentes del proyecto</h2>
+            <p class="lead">El informe usa un enfoque aplicado, tecnológico y descriptivo, sustentado en artefactos del producto, documentación técnica y evidencias de validación.</p>
+          </div>
+          <div class="method-table method-table-rich reveal" style="--order: 2" role="table" aria-label="Fuentes y relación con SDLC">
+            <div class="method-row method-head" role="row">
+              <span role="columnheader">Fuente</span>
+              <span role="columnheader">Uso en el informe</span>
+              <span role="columnheader">Relación SDLC</span>
+            </div>
+            <div class="method-row" role="row">
+              <span>Backlog e historias</span><span>Alcance, RF, RNF, reglas y priorización.</span><span>Análisis y priorización</span>
+            </div>
+            <div class="method-row" role="row">
+              <span>Figma y capturas UX</span><span>Flujos web, gerente, chofer y móvil.</span><span>Diseño e implementación</span>
+            </div>
+            <div class="method-row" role="row">
+              <span>Arquitectura y DER</span><span>Componentes, datos, responsabilidades y persistencia.</span><span>Diseño técnico</span>
+            </div>
+            <div class="method-row" role="row">
+              <span>Código web/backend/app</span><span>Funcionalidades implementadas, endpoints y restricciones técnicas.</span><span>Implementación</span>
+            </div>
+            <div class="method-row" role="row">
+              <span>Evidencias QA</span><span>Pruebas funcionales, integración, roles y defectos.</span><span>Validación</span>
+            </div>
+            <div class="method-row" role="row">
+              <span>Documentación nube</span><span>Despliegue, costos, riesgos y operación.</span><span>Despliegue y mantenimiento</span>
+            </div>
+          </div>
+          <p class="method-closure reveal" style="--order: 3">Las fuentes sostienen el análisis: cada decisión se vincula con artefactos, evidencia y validación.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-11" data-title="Requerimientos" data-section="Análisis">
+        <div class="slide-inner requirements-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Ingeniería de requerimientos</span>
+            <h2>Requerimientos funcionales y no funcionales</h2>
+            <p class="lead">Los requerimientos conectan el diagnóstico con funcionalidades verificables, reglas de negocio y atributos de calidad.</p>
+            <ul class="key-list">
+              <li>RF: autenticación, roles, camiones, contratos, jornadas, alertas y auditoría.</li>
+              <li>RF móvil: jornada asignada, inicio, cierre, observaciones, SOS/auxilio y sincronización.</li>
+              <li>RNF: seguridad, usabilidad, integridad, mantenibilidad y trazabilidad.</li>
+              <li>RNF offline: cola local, conservación de eventos y sincronización posterior controlada.</li>
+            </ul>
+          </div>
+          <div class="requirements-panel requirements-table reveal" style="--order: 2">
+            <div class="mini-table">
+              <div><strong>Código</strong><strong>Tipo</strong><strong>Requerimiento</strong><strong>Evidencia</strong></div>
+              <div><span>RF-AUT</span><span>Funcional</span><span>Login y control por rol</span><span>Web / app / API</span></div>
+              <div><span>RF-JOR</span><span>Funcional</span><span>Registro, inicio y cierre de jornada</span><span>Web / app / backend</span></div>
+              <div><span>RF-CON</span><span>Funcional</span><span>Gestión de contratos y unidades</span><span>Web gerente</span></div>
+              <div><span>RF-ALT</span><span>Funcional</span><span>SOS/auxilio y atención de alertas</span><span>App / web admin</span></div>
+              <div><span>RNF-SEG</span><span>No funcional</span><span>Autenticación y permisos por rol</span><span>Pruebas de acceso</span></div>
+              <div><span>RNF-OFF</span><span>No funcional</span><span>Offline básico y sincronización</span><span>App móvil</span></div>
+              <div><span>RNF-TRA</span><span>No funcional</span><span>Auditoría y trazabilidad</span><span>Logs / historial</span></div>
+            </div>
+          </div>
+          <p class="requirements-closure reveal" style="--order: 3">Una funcionalidad se considera defendible cuando tiene pantalla, endpoint o persistencia, regla asociada y evidencia de prueba.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-reglas" data-title="Reglas de negocio" data-section="Análisis">
+        <div class="slide-inner rules-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Criterios operativos</span>
+            <h2>Reglas de negocio del MVP</h2>
+            <p class="lead">Las reglas convierten los requerimientos en criterios verificables para jornadas, roles, alertas, auditoría y sincronización.</p>
+          </div>
+          <div class="rule-grid rule-grid-coded reveal" style="--order: 2" aria-label="Reglas de negocio por módulo">
+            <article>
+              <span class="badge badge-blue">Roles y permisos</span>
+              <p><strong>RN-AUT-01</strong> Todo usuario opera con rol autorizado.</p>
+              <p><strong>RN-AUT-02</strong> Admin, gerente y chofer acceden a módulos/endpoints diferenciados.</p>
+              <p><strong>RN-MOV-01</strong> App móvil reservada para rol chofer.</p>
+            </article>
+            <article>
+              <span class="badge badge-green">Jornadas</span>
+              <p><strong>RN-JOR-01</strong> Jornada no finaliza sin inicio válido.</p>
+              <p><strong>RN-JOR-02</strong> Chofer no mantiene dos jornadas activas simultáneamente.</p>
+              <p><strong>RN-JOR-03</strong> Jornada asociada a conductor, unidad y contrato cuando aplique.</p>
+            </article>
+            <article>
+              <span class="badge badge-amber">Alertas</span>
+              <p><strong>RN-ALT-01</strong> Alerta conserva tipo, usuario, jornada, fecha y estado.</p>
+              <p><strong>RN-ALT-02</strong> SOS y auxilio generan trazabilidad para revisión administrativa.</p>
+              <p><strong>RN-ALT-03</strong> Alerta resuelta conserva historial de atención.</p>
+            </article>
+            <article>
+              <span class="badge badge-purple">Auditoría y sincronización</span>
+              <p><strong>RN-AUD-01</strong> Acciones críticas quedan registradas.</p>
+              <p><strong>RN-OFF-01</strong> Eventos offline guardados con identificador local y estado.</p>
+              <p><strong>RN-OFF-02</strong> Sync evita duplicar eventos ya procesados.</p>
+            </article>
+          </div>
+          <p class="rule-closure reveal" style="--order: 3">Cada regla debe reflejarse en una prueba funcional, de integración o de seguridad.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-12" data-title="MoSCoW y trazabilidad" data-section="Análisis">
+        <div class="slide-inner trace-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Control del alcance</span>
-            <h2>Priorización y trazabilidad</h2>
-            <p class="lead">La trazabilidad permitirá demostrar que cada función incluida en el MVP tiene una justificación, una regla asociada y una forma de validación.</p>
-            <div class="artifact-strip centered" aria-label="Artefacto de la seccion">
-              <span class="artifact-chip">Artefacto: matriz HU-RF-RN-CA-CP</span>
-            </div>
+            <h2>Priorización MoSCoW y trazabilidad</h2>
+            <p class="lead">La priorización separa Must, Should, Could y Won't para relacionar requerimientos, diseño, implementación y pruebas.</p>
           </div>
-          <div class="trace-board reveal" style="--order: 2" role="table" aria-label="Matriz de trazabilidad">
-            <div class="trace-row trace-head" role="row">
-              <span role="columnheader">HU</span>
-              <span role="columnheader">Requerimiento</span>
-              <span role="columnheader">Regla asociada</span>
-              <span role="columnheader">Evidencia / prueba</span>
-              <span role="columnheader">Prioridad</span>
+          <div class="trace-content reveal" style="--order: 2">
+            <div class="trace-board trace-board-compact" role="table" aria-label="Matriz MoSCoW y trazabilidad">
+              <div class="trace-row trace-head" role="row">
+                <span role="columnheader">Función</span>
+                <span role="columnheader">Prioridad</span>
+                <span role="columnheader">Diseño</span>
+                <span role="columnheader">Implementación</span>
+                <span role="columnheader">Prueba</span>
+              </div>
+              <div class="trace-row" role="row">
+                <span>Jornadas y contratos</span><span class="badge badge-green">Must</span><span>Flujo web</span><span>Admin/gerente</span><span>Funcional</span>
+              </div>
+              <div class="trace-row" role="row">
+                <span>SOS/auxilio y observaciones</span><span class="badge badge-green">Must</span><span>App móvil + web admin</span><span>Flutter + API</span><span>Integración</span>
+              </div>
+              <div class="trace-row" role="row">
+                <span>Offline básico</span><span class="badge badge-blue">Should</span><span>Cola local</span><span>Sync controlada</span><span>Offline/sync</span>
+              </div>
+              <div class="trace-row" role="row">
+                <span>GPS real-time</span><span class="badge badge-amber">Won't</span><span>Roadmap</span><span>Fuera del MVP</span><span>No aplica</span>
+              </div>
             </div>
-            <div class="trace-row" role="row">
-              <span>Registro de jornada</span>
-              <span>Crear jornada</span>
-              <span>Conductor, unidad y contrato vigentes</span>
-              <span>CP registro exitoso</span>
-              <span class="badge badge-green">Must</span>
-            </div>
-            <div class="trace-row" role="row">
-              <span>Inicio / fin de turno</span>
-              <span>Marcar inicio y cierre</span>
-              <span>No finalizar sin iniciar</span>
-              <span>CP cambio de estado</span>
-              <span class="badge badge-green">Must</span>
-            </div>
-            <div class="trace-row" role="row">
-              <span>Observaciones</span>
-              <span>Registrar observación</span>
-              <span>Asociar a jornada existente</span>
-              <span>CP observación guardada</span>
-              <span class="badge badge-blue">Should</span>
-            </div>
-            <div class="trace-row" role="row">
-              <span>GPS avanzado</span>
-              <span>Evolución futura</span>
-              <span>Fuera del MVP</span>
-              <span>No aplica</span>
-              <span class="badge badge-amber">Won't</span>
-            </div>
+            <figure class="evidence-figure trace-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/04_trazabilidad_resumida_mvp.png" alt="Trazabilidad resumida del MVP">
+              <figcaption>Evidencia visual: la trazabilidad conecta historia, requerimiento, regla, diseño y prueba.</figcaption>
+            </figure>
           </div>
+          <p class="trace-defense reveal" style="--order: 3">Una funcionalidad solo entra al MVP si puede relacionarse con requerimiento, diseño, implementación y evidencia de prueba.</p>
         </div>
-        <template class="speaker-note">Indicar que esta matriz evita prometer funciones no probadas y fortalece la defensa del alcance frente a requerimientos, reglas y pruebas.</template>
       </section>
 
-      <section class="slide" id="slide-10" data-nav="Diseño" data-title="Diseño de la solución">
-        <div class="slide-inner two-column">
+      <section class="slide slide-fit" id="slide-13" data-title="UX y Figma" data-section="Diseño">
+        <div class="slide-inner ux-layout">
           <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">De requerimientos a estructura</span>
-            <h2>Diseño de la solución</h2>
-            <p class="lead">En diseño se mostrará cómo los requerimientos se transforman en una estructura técnica y visual: prototipos Figma, arquitectura por capas, diagramas C4/UML, modelo de datos y flujos de interacción.</p>
-            <div class="artifact-strip" aria-label="Artefactos de la seccion">
-              <span class="artifact-chip">Figma</span>
-              <span class="artifact-chip">C4 / UML</span>
-              <span class="artifact-chip">DER</span>
-              <span class="artifact-chip">Flujos principales</span>
-            </div>
+            <span class="eyebrow">Diseño de interacción</span>
+            <h2>Diseño UX y prototipos Figma</h2>
+            <p class="lead">Los prototipos consolidan los flujos de administración, gerencia y chofer antes de la implementación funcional.</p>
             <ul class="key-list">
-              <li>Capa de presentación: Web Admin y Móvil Chofer.</li>
-              <li>Capa de servicios: API / Backend como núcleo técnico compartido.</li>
-              <li>Capa de datos: base de datos, auditoría y registros operativos.</li>
-              <li>Capa de operación: despliegue, monitoreo y mantenimiento.</li>
-              <li>Casos de uso y secuencia para inicio/fin de jornada.</li>
+              <li>Web: administración de flota, contratos, jornadas, alertas y auditoría.</li>
+              <li>Gerencia: dashboard, contratos e historial operativo.</li>
+              <li>Móvil: login, jornada asignada, inicio/fin, observaciones, SOS/auxilio y offline básico.</li>
+              <li>Criterio UX: interfaz clara, rápida, operativa y auditable.</li>
+            </ul>
+            <div class="resource-row">
+              <a class="resource-link" href="#figma-link" aria-label="Ver Figma">Ver Figma</a>
+            </div>
+          </div>
+          <div class="evidence-pair ux-evidence reveal" style="--order: 2" aria-label="Prototipos UX representativos">
+            <figure class="evidence-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/07_diseno_ux_referencia/06_ux_web_consulta_conductores.png" alt="Prototipo UX web de consulta de conductores">
+              <figcaption>Prototipo UX web: consulta/gestión operativa.</figcaption>
+            </figure>
+            <figure class="evidence-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/07_diseno_ux_referencia/04_ux_movil_jornada_asignada.png" alt="Prototipo UX móvil de jornada asignada">
+              <figcaption>Prototipo UX móvil: jornada asignada del chofer.</figcaption>
+            </figure>
+          </div>
+          <p class="ux-defense reveal" style="--order: 3">El diseño UX traduce roles y flujos del MVP en pantallas comprensibles antes de pasar a implementación.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-14" data-title="Arquitectura general" data-section="Diseño">
+        <div class="slide-inner architecture-layout">
+          <div class="center-copy reveal" style="--order: 1">
+            <span class="eyebrow">Estructura técnica</span>
+            <h2>Arquitectura general web-móvil-backend</h2>
+            <p class="lead">La arquitectura separa presentación, servicios, datos y operación para sostener trazabilidad, roles y sincronización.</p>
+          </div>
+          <div class="architecture-content reveal" style="--order: 2">
+            <figure class="evidence-figure architecture-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/01_arquitectura_general_mvp.png" alt="Arquitectura general del MVP híbrido NANU TECH">
+              <figcaption>Evidencia de diseño técnico: arquitectura web-móvil-backend del MVP.</figcaption>
+            </figure>
+            <div class="architecture-responsibilities" aria-label="Responsabilidades por canal y capa">
+              <article><span class="badge badge-blue">Web</span><p>Administración, gerencia y panel chofer de respaldo.</p></article>
+              <article><span class="badge badge-green">App móvil</span><p>Canal principal del chofer en campo.</p></article>
+              <article><span class="badge badge-purple">Backend/API</span><p>Reglas, roles, endpoints, validaciones y auditoría.</p></article>
+              <article><span class="badge badge-amber">Datos</span><p>PostgreSQL/RDS central y SQLite local móvil.</p></article>
+              <article><span class="badge badge-blue">Cloud preparado</span><p>AWS SAM, API Gateway, Lambdas y testing/cloud inicial.</p></article>
+            </div>
+          </div>
+          <p class="architecture-defense reveal" style="--order: 3">La arquitectura no busca mostrar producción empresarial completa, sino un MVP web-móvil-backend preparado para validación y despliegue inicial.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-offline" data-title="Sincronización offline" data-section="Diseño">
+        <div class="slide-inner offline-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Resiliencia operativa</span>
+            <h2>Sincronización offline básica</h2>
+            <p class="lead">El soporte offline reduce pérdida de eventos críticos en campo, sin presentarse como offline robusto productivo.</p>
+            <ul class="key-list">
+              <li>Eventos cubiertos: inicio, fin, observación, SOS y auxilio.</li>
+              <li>SQLite conserva sesión, jornada cacheada y eventos en cola.</li>
+              <li>La cola local usa estado de sincronización e identificador local.</li>
+              <li>La sincronización posterior envía eventos al backend al recuperar conexión.</li>
+              <li>No se defiende como offline robusto productivo ni sincronización en background completa.</li>
             </ul>
           </div>
-          <div class="architecture-canvas reveal" style="--order: 2" role="img" aria-label="Mini diagrama de arquitectura">
-            <div class="arch-layer client-layer">
-              <strong>Capa de presentación</strong>
-              <span>Web Admin</span>
-              <span>Móvil Chofer</span>
-            </div>
-            <div class="arch-arrow"></div>
-            <div class="arch-layer service-layer">
-              <strong>Capa de servicios</strong>
-              <span>API / Backend</span>
-              <span>Reglas comunes</span>
-              <span>Seguridad</span>
-            </div>
-            <div class="arch-arrow"></div>
-            <div class="arch-layer data-layer">
-              <strong>Capa de datos</strong>
-              <span>Base de datos</span>
-              <span>Auditoría</span>
-              <span>Registros operativos</span>
-            </div>
-            <div class="arch-arrow"></div>
-            <div class="arch-layer operation-layer">
-              <strong>Capa de operación</strong>
-              <span>Despliegue</span>
-              <span>Monitoreo</span>
-              <span>Mantenimiento</span>
+          <div class="offline-visual reveal" style="--order: 2">
+            <figure class="evidence-figure offline-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/03_sync_offline_basica.png" alt="Arquitectura de sincronización offline básica">
+              <figcaption>Diseño técnico: registro local, cola por sincronizar, reconexión y envío al backend.</figcaption>
+            </figure>
+            <div class="offline-steps" aria-label="Secuencia offline básica">
+              <article><span>01</span><strong>Sin conexión</strong><p>El evento se guarda localmente.</p></article>
+              <article><span>02</span><strong>Vuelve conexión</strong><p>La app detecta conectividad.</p></article>
+              <article><span>03</span><strong>Reenvío</strong><p>La API recibe el evento en cola.</p></article>
+              <article><span>04</span><strong>Confirmación</strong><p>Backend registra y marca sincronizado.</p></article>
             </div>
           </div>
+          <p class="offline-defense reveal" style="--order: 3">Esta decisión responde al contexto de rutas con conectividad variable, donde el chofer necesita registrar eventos aun sin conexión estable.</p>
         </div>
-        <template class="speaker-note">Explicar que la arquitectura por capas es lógica y sirve para separar responsabilidades: interfaz, servicios, datos y operación.</template>
       </section>
 
-      <section class="slide" id="slide-11" data-nav="Implementación" data-title="Implementación">
-        <div class="slide-inner">
-          <div class="center-copy reveal" style="--order: 1">
-            <span class="eyebrow">Componentes técnicos a exponer</span>
-            <h2>Implementación</h2>
-            <p class="lead">En implementación se mostrarán los componentes construidos o integrados: interfaz web, canal móvil, API/backend, base de datos, autenticación y endpoints principales del flujo de jornada.</p>
-            <div class="artifact-strip centered" aria-label="Artefactos de la seccion">
-              <span class="artifact-chip">Pantallas</span>
-              <span class="artifact-chip">Endpoints</span>
-              <span class="artifact-chip">Tecnologías</span>
-              <span class="artifact-chip">Integración</span>
-            </div>
-          </div>
-          <div class="dashboard-preview reveal" style="--order: 2" role="img" aria-label="Vista conceptual tipo dashboard de componentes implementados">
-            <div class="mini-sidebar">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="mini-dashboard">
-              <article>
-                <span class="badge badge-blue">Frontend</span>
-                <h3>Web admin</h3>
-                <p>Pantallas de gestión, consulta y validación.</p>
-              </article>
-              <article>
-                <span class="badge badge-green">Móvil</span>
-                <h3>Chofer</h3>
-                <p>Jornada asignada, inicio, cierre y observaciones.</p>
-              </article>
-              <article>
-                <span class="badge badge-purple">Backend</span>
-                <h3>API</h3>
-                <p>Servicios del flujo, reglas compartidas y seguridad.</p>
-              </article>
-              <article>
-                <span class="badge badge-amber">Datos</span>
-                <h3>Datos y auth</h3>
-                <p>Jornadas, roles, contratos y auditoría.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-        <template class="speaker-note">Diferenciar claramente lo implementado, lo integrado parcialmente y lo delimitado como evolución; mencionar tecnologías solo de forma general o confirmada por el equipo.</template>
-      </section>
-
-      <section class="slide" id="slide-12" data-nav="Pruebas" data-title="Pruebas y validación">
-        <div class="slide-inner split-visual">
+      <section class="slide slide-fit" id="slide-15" data-title="Modelo de datos" data-section="Diseño">
+        <div class="slide-inner data-layout">
           <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">Comprobación del cumplimiento</span>
-            <h2>Pruebas y validación</h2>
-            <p class="lead">La validación demostrará que los requerimientos principales del MVP fueron comprobados mediante casos funcionales, pruebas de API, integración, UI y evidencias QA.</p>
-            <div class="artifact-strip" aria-label="Artefactos de la seccion">
-              <span class="artifact-chip">Matriz de pruebas</span>
-              <span class="artifact-chip">API QA</span>
-              <span class="artifact-chip">Capturas QA</span>
-              <span class="artifact-chip">Trazabilidad</span>
-            </div>
-            <ul class="key-list">
-              <li>Pruebas funcionales del flujo de jornada.</li>
-              <li>Pruebas API e integración entre web, móvil, backend y datos.</li>
-              <li>Revisión UI, seguridad básica y control de acceso.</li>
-              <li>Relación con HU, RF, reglas y evidencias asociadas.</li>
-            </ul>
-          </div>
-          <div class="qa-table reveal" style="--order: 2" role="table" aria-label="Tabla de casos de prueba">
-            <div class="qa-row qa-head" role="row">
-              <span role="columnheader">Caso</span>
-              <span role="columnheader">Tipo</span>
-              <span role="columnheader">Estado</span>
-            </div>
-            <div class="qa-row" role="row">
-              <span>Inicio de jornada</span>
-              <span>Funcional</span>
-              <span class="badge badge-green">Aprobado</span>
-            </div>
-            <div class="qa-row" role="row">
-              <span>Cierre con observación</span>
-              <span>Integración</span>
-              <span class="badge badge-blue">En validación</span>
-            </div>
-            <div class="qa-row" role="row">
-              <span>Control de acceso</span>
-              <span>Seguridad</span>
-              <span class="badge badge-amber">Observado</span>
-            </div>
-            <div class="qa-row" role="row">
-              <span>GPS avanzado</span>
-              <span>Evolución</span>
-              <span class="badge badge-purple">No incluido MVP</span>
+            <span class="eyebrow">Persistencia</span>
+            <h2>Modelo de datos / DER</h2>
+            <p class="lead">El modelo de datos sostiene la trazabilidad entre usuarios, flota, contratos, jornadas, alertas, auditoría y eventos móviles.</p>
+            <div class="data-card-grid" aria-label="Lectura resumida del modelo de datos">
+              <article>
+                <span class="artifact-chip">Núcleo operativo</span>
+                <ul>
+                  <li>Usuarios, roles, conductores y permisos.</li>
+                  <li>Camiones/unidades, contratos y asignaciones.</li>
+                  <li>Jornadas, observaciones, alertas/SOS y estados.</li>
+                </ul>
+              </article>
+              <article>
+                <span class="artifact-chip">Trazabilidad y móvil</span>
+                <ul>
+                  <li>Auditoría de accesos y acciones críticas.</li>
+                  <li>Eventos offline para sincronización posterior.</li>
+                  <li>Relación entre jornada, conductor, unidad y contrato.</li>
+                </ul>
+              </article>
             </div>
           </div>
+          <figure class="evidence-figure der-figure reveal" style="--order: 2">
+            <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/03_modelo_datos/01_der_postgresql_central.png" alt="DER PostgreSQL central del MVP NANU TECH">
+            <figcaption>Evidencia de diseño de datos: DER PostgreSQL central del MVP. El DER completo queda disponible en anexos para revisión detallada.</figcaption>
+          </figure>
+          <p class="data-defense reveal" style="--order: 3">Una jornada queda asociada a conductor, unidad y contrato; las alertas, observaciones y acciones críticas quedan registradas para auditoría.</p>
         </div>
-        <template class="speaker-note">Indicar que las pruebas se presentarán conectadas a HU, RF, reglas y evidencias, no como una demostración manual aislada.</template>
       </section>
 
-      <section class="slide" id="slide-13" data-nav="Despliegue" data-title="Despliegue, nube y costos">
-        <div class="slide-inner">
-          <div class="center-copy reveal" style="--order: 1">
-            <span class="eyebrow">Viabilidad técnica y operativa</span>
-            <h2>Despliegue, nube y costos</h2>
-            <p class="lead">En despliegue se explicará cómo el sistema puede operar en ambientes controlados, qué servicios se consideran, qué costos aproximados tendría la infraestructura y qué limitaciones deben declararse.</p>
-            <div class="artifact-strip centered" aria-label="Artefactos de la seccion">
-              <span class="artifact-chip">Diagrama de despliegue</span>
-              <span class="artifact-chip">Ambiente QA</span>
-              <span class="artifact-chip">Servicios cloud</span>
-              <span class="artifact-chip">Costos referenciales</span>
+      <section class="slide slide-fit" id="slide-16" data-title="Implementación web" data-section="Implementación">
+        <div class="slide-inner web-impl-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Canal web</span>
+            <h2>Implementación web</h2>
+            <p class="lead">La web concentra la operación administrativa, la supervisión gerencial y un canal secundario de respaldo para el chofer.</p>
+            <div class="web-role-grid" aria-label="Módulos web por rol">
+              <article><span class="badge badge-blue">Administrador</span><p>Dashboard, camiones, jornadas, alertas, auditoría y conductores como consulta/perfil.</p></article>
+              <article><span class="badge badge-purple">Gerente</span><p>Dashboard gerencial, contratos, asignación de unidades e historial operativo.</p></article>
+              <article><span class="badge badge-amber">Chofer web</span><p>Canal secundario para consulta de jornada, observaciones, SOS/auxilio o contingencia.</p></article>
+              <article><span class="badge badge-green">Integración</span><p>Consumo de API, roles, permisos y datos compartidos con móvil/backend.</p></article>
+            </div>
+            <div class="resource-row">
+              <a class="resource-link" href="#sistema-web-link" aria-label="Abrir sistema web">Abrir sistema web</a>
             </div>
           </div>
-          <div class="service-grid reveal" style="--order: 2">
-            <article class="service-card">
-              <span class="service-icon web"></span>
-              <h3>Frontend hosting</h3>
-              <p>Publicación del canal web admin.</p>
+          <div class="web-impl-visual reveal" style="--order: 2" aria-label="Evidencia de implementación web">
+            <div class="evidence-pair web-impl-evidence">
+              <figure class="evidence-figure">
+                <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/04_capturas_web_admin/02_dashboard_administrador.png" alt="Dashboard del administrador web NANU TECH">
+                <figcaption>Evidencia de implementación web: dashboard administrador.</figcaption>
+              </figure>
+              <figure class="evidence-figure">
+                <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/05_capturas_web_gerente/01_gestion_contratos_gerente.png" alt="Gestión de contratos del gerente web NANU TECH">
+                <figcaption>Evidencia de implementación web: gestión de contratos del gerente.</figcaption>
+              </figure>
+            </div>
+            <article class="web-backup-note">
+              <span class="artifact-chip">Canal chofer web</span>
+              <p>Respaldo operativo; la app móvil es el canal principal del chofer en campo.</p>
             </article>
-            <article class="service-card">
-              <span class="service-icon mobile"></span>
-              <h3>Ambiente móvil</h3>
-              <p>Pruebas del canal del chofer.</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon api"></span>
-              <h3>API / Backend</h3>
-              <p>Servicio común para web y móvil.</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon db"></span>
-              <h3>Base de datos</h3>
-              <p>Relacional o definida por el equipo.</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon auth"></span>
-              <h3>Autenticación</h3>
-              <p>Roles, accesos y seguridad básica.</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon log"></span>
-              <h3>Monitoreo / logs</h3>
-              <p>Auditoría y seguimiento técnico.</p>
-            </article>
-            <article class="service-card">
+          </div>
+          <p class="web-defense reveal" style="--order: 3">El sistema web demuestra la administración y supervisión del MVP; no se presenta como plataforma completa de telemetría.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-17" data-title="Implementación app móvil" data-section="Implementación">
+        <div class="slide-inner mobile-impl-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Canal principal del chofer</span>
+            <h2>Implementación app móvil</h2>
+            <p class="lead">La app móvil funciona como canal principal del chofer para registrar eventos operativos desde campo.</p>
+            <ul class="key-list">
+              <li>Login del chofer y visualización de jornada asignada.</li>
+              <li>Inicio de turno y finalización con observación.</li>
+              <li>SOS/auxilio como eventos operativos trazables.</li>
+              <li>Offline básico con cola local y sincronización posterior controlada.</li>
+              <li>No implementa GPS real-time ni tracking en mapa vivo.</li>
+            </ul>
+            <div class="resource-row">
+              <a class="resource-link" href="#app-movil-link" aria-label="Ver evidencias app móvil">Ver evidencias app móvil</a>
+            </div>
+          </div>
+          <div class="mobile-impl-visual reveal" style="--order: 2" aria-label="Evidencia app móvil y flujo operativo">
+            <div class="mobile-flow">
+              <span>Login</span>
+              <span>Jornada</span>
+              <span>Observación</span>
+              <span>SOS/auxilio</span>
+              <span>Offline/sync</span>
+            </div>
+            <div class="evidence-pair mobile-impl-evidence">
+              <figure class="evidence-figure">
+                <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/07_diseno_ux_referencia/05_ux_movil_sincronizacion_completada.png" alt="Diseño UX móvil de sincronización completada">
+                <figcaption>Diseño UX móvil: sincronización completada.</figcaption>
+              </figure>
+              <figure class="evidence-figure">
+                <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/03_sync_offline_basica.png" alt="Diagrama de offline básico y sincronización posterior">
+                <figcaption>Diseño técnico: offline básico con sincronización posterior controlada.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <p class="mobile-defense reveal" style="--order: 3">La app móvil permite que el chofer registre eventos críticos incluso con conectividad limitada, bajo un soporte offline básico y controlado.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-18" data-title="Backend, API y seguridad" data-section="Implementación">
+        <div class="slide-inner backend-layout">
+          <div class="copy-panel reveal" style="--order: 1">
+            <span class="eyebrow">Servicios compartidos</span>
+            <h2>Backend/API, seguridad y auditoría</h2>
+            <p class="lead">El backend/API centraliza reglas, permisos, persistencia y trazabilidad para que web y app móvil trabajen sobre la misma fuente de datos.</p>
+            <div class="backend-card-grid" aria-label="Responsabilidades del backend API">
+              <article><span class="badge badge-blue">Auth y roles</span><p>Login, token y permisos para administrador, gerente y chofer.</p></article>
+              <article><span class="badge badge-green">Endpoints MVP</span><p>Usuarios, camiones, contratos, jornadas, alertas y auditoría.</p></article>
+              <article><span class="badge badge-amber">Seguridad</span><p>Rutas protegidas, validación de permisos y accesos no autorizados.</p></article>
+              <article><span class="badge badge-purple">Auditoría</span><p>Acciones críticas asociadas a usuario, rol, módulo, fecha y estado.</p></article>
+              <article><span class="badge badge-blue">Calidad técnica</span><p>CORS, variables de entorno, logs, pruebas de acceso y ambiente.</p></article>
+            </div>
+          </div>
+          <div class="backend-visual reveal" style="--order: 2" aria-label="Evidencia backend API seguridad auditoría">
+            <figure class="evidence-figure backend-main-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/05_mapa_rol_modulo_api_dato.png" alt="Mapa rol módulo API dato del MVP">
+              <figcaption>Diseño técnico: mapa rol-módulo-API-dato.</figcaption>
+            </figure>
+            <figure class="evidence-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/04_capturas_web_admin/07_auditoria_accesos_admin.png" alt="Auditoría de accesos del administrador web">
+              <figcaption>Evidencia de implementación: auditoría de accesos.</figcaption>
+            </figure>
+          </div>
+          <p class="backend-defense reveal" style="--order: 3">El backend no es actor funcional; es el soporte técnico que integra reglas, datos, permisos y auditoría del MVP.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-19" data-title="Pruebas" data-section="Validación">
+        <div class="slide-inner qa-layout">
+          <div class="center-copy reveal" style="--order: 1">
+            <span class="eyebrow">Validación</span>
+            <h2>Pruebas y validaciones</h2>
+            <p class="lead">La validación cubre funcionamiento, integración web-móvil-backend, roles, app móvil, offline/sync y evidencias QA del MVP.</p>
+          </div>
+          <div class="qa-content reveal" style="--order: 2">
+            <div class="qa-validation-grid" aria-label="Tipos de pruebas aplicadas">
+              <article><span class="badge badge-blue">Funcionales</span><p>Login, jornadas, contratos, alertas y auditoría.</p></article>
+              <article><span class="badge badge-green">Integración</span><p>Web, app móvil, backend/API y base de datos.</p></article>
+              <article><span class="badge badge-purple">Roles y permisos</span><p>Administrador, gerente y chofer con accesos diferenciados.</p></article>
+              <article><span class="badge badge-amber">App móvil</span><p>Jornada asignada, inicio, fin, observaciones, SOS/auxilio.</p></article>
+              <article><span class="badge badge-blue">Offline/sync</span><p>Cola local, eventos en cola y sincronización posterior controlada.</p></article>
+            </div>
+            <figure class="evidence-figure qa-figure">
+              <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/08_pruebas_qa/01_collage_evidencias_qa.png" alt="Collage de evidencias QA del MVP NANU TECH">
+              <figcaption>Evidencia QA: pruebas funcionales, errores detectados, validación de flujos y revisión de resultados.</figcaption>
+            </figure>
+          </div>
+          <p class="qa-defense reveal" style="--order: 3">Las pruebas validan el funcionamiento base del MVP; las validaciones productivas avanzadas, cloud estable y offline robusto quedan fuera del alcance actual.</p>
+        </div>
+      </section>
+
+      <section class="slide slide-fit" id="slide-20" data-title="Despliegue y costos" data-section="Operación">
+        <div class="slide-inner deploy-layout">
+          <div class="center-copy reveal" style="--order: 1">
+            <span class="eyebrow">Infraestructura</span>
+            <h2>Despliegue, AWS y costos</h2>
+            <p class="lead">El sistema queda preparado para despliegue local, testing y cloud inicial; la estimación de costos es referencial y académica.</p>
+          </div>
+          <div class="deploy-content reveal" style="--order: 2" aria-label="Evidencia de preparación AWS y costos">
+            <div class="deploy-cloud">
+              <figure class="evidence-figure deploy-figure">
+                <img class="evidence-image" src="NANUTECH_EVIDENCIAS_PRESENTACION/02_diagramas_clave/06_arquitectura_aws_preparada.png" alt="Arquitectura AWS preparada para testing y cloud inicial">
+                <figcaption>Preparación para cloud/testing: arquitectura AWS preparada, no producción empresarial garantizada.</figcaption>
+              </figure>
+              <div class="deploy-chip-grid">
+                <span>Local/testing</span>
+                <span>SAM + API Gateway</span>
+                <span>Lambdas</span>
+                <span>PostgreSQL/RDS</span>
+                <span>Cognito preparado</span>
+                <span>Logs/CloudWatch</span>
+              </div>
+            </div>
+            <div class="cost-card cost-breakdown">
               <span class="service-icon cost"></span>
-              <h3>Costos</h3>
-              <p>Estimación académica de operación.</p>
-            </article>
+              <h3>S/ 17,088</h3>
+              <p>Costo referencial académico para dimensionar desarrollo, despliegue inicial, soporte y capacitación.</p>
+              <div class="cost-lines" aria-label="Desglose de costo referencial">
+                <span><strong>MVP</strong> S/ 9,600</span>
+                <span><strong>Cloud/testing</strong> S/ 1,488</span>
+                <span><strong>Capacitación</strong> S/ 1,200</span>
+                <span><strong>Soporte inicial</strong> S/ 3,600</span>
+                <span><strong>Contingencia</strong> S/ 1,200</span>
+              </div>
+              <small>No representa cotización comercial ni operación empresarial final.</small>
+            </div>
           </div>
+          <p class="deploy-defense reveal" style="--order: 3">La estimación permite discutir viabilidad inicial del MVP sin afirmar una implantación comercial real.</p>
         </div>
-        <template class="speaker-note">Aclarar que el despliegue se plantea como ambiente de pruebas o propuesta de despliegue; los costos son referenciales y académicos, no presupuesto empresarial definitivo.</template>
       </section>
 
-      <section class="slide" id="slide-14" data-nav="Mantenimiento" data-title="Mantenimiento y evolución">
-        <div class="slide-inner two-column">
-          <div class="copy-panel reveal" style="--order: 1">
-            <span class="eyebrow">Sostenibilidad del sistema</span>
-            <h2>Mantenimiento y evolución</h2>
-            <p class="lead">El mantenimiento mostrará cómo el sistema puede sostenerse después del MVP, corrigiendo errores, adaptando reglas, mejorando funcionalidades y preparando una evolución controlada hacia módulos avanzados.</p>
-            <div class="artifact-strip" aria-label="Artefactos de la seccion">
-              <span class="artifact-chip">Plan de mantenimiento</span>
-              <span class="artifact-chip">Roadmap futuro</span>
-            </div>
-            <ul class="key-list">
-              <li>Mantenimiento correctivo, adaptativo, perfectivo y preventivo.</li>
-              <li>Control de cambios, monitoreo y pruebas de regresión.</li>
-              <li>Mejoras incrementales sobre evidencias de uso y reglas nuevas.</li>
-              <li>Evolución hacia GPS, alertas, combustible y analítica.</li>
-            </ul>
-          </div>
-          <div class="roadmap reveal" style="--order: 2" role="img" aria-label="Roadmap de evolucion futura">
-            <div class="roadmap-item now">
-              <span>MVP</span>
-              <strong>Jornadas operativas</strong>
-            </div>
-            <div class="roadmap-item next">
-              <span>Evolución</span>
-              <strong>Alertas y GPS</strong>
-            </div>
-            <div class="roadmap-item future">
-              <span>Escalamiento</span>
-              <strong>Combustible y analítica</strong>
-            </div>
-          </div>
-        </div>
-        <template class="speaker-note">Explicar que las funciones futuras no se presentan como entregadas, sino como crecimiento planificado y controlado después del MVP.</template>
-      </section>
-
-      <section class="slide" id="slide-15" data-nav="Resultados" data-title="Resultados a presentar">
-        <div class="slide-inner">
+      <section class="slide slide-fit" id="slide-21" data-title="Operación y mantenimiento" data-section="Operación">
+        <div class="slide-inner ops-final-layout">
           <div class="center-copy reveal" style="--order: 1">
-            <span class="eyebrow">Evidencia de coherencia académica</span>
-            <h2>Resultados a presentar</h2>
-            <p class="lead">Los resultados se organizarán por fase: análisis, diseño, implementación, pruebas, despliegue y mantenimiento. Cada resultado se presentará con su evidencia, estado de cumplimiento y limitación correspondiente.</p>
-            <div class="artifact-strip centered" aria-label="Artefacto de la seccion">
-              <span class="artifact-chip">Artefacto: tabla de resultados por fase, estado y evidencia</span>
-            </div>
+            <span class="eyebrow">Sostenibilidad</span>
+            <h2>Operación, capacitación y mantenimiento</h2>
+            <p class="lead">La operación se plantea como puesta en marcha controlada, capacitación por rol, soporte inicial y mantenimiento planificado.</p>
           </div>
-          <div class="metrics-panel reveal" style="--order: 2">
-            <article class="metric-card">
-              <span class="metric-value">01</span>
-              <h3>Análisis</h3>
-              <p>Brecha, actores, requerimientos y reglas.</p>
+          <div class="ops-final-grid reveal" style="--order: 2" aria-label="Plan de operación capacitación mantenimiento y evolución">
+            <article>
+              <span class="badge badge-blue">Puesta en marcha</span>
+              <p>Ambiente local/testing/cloud inicial, carga de usuarios, camiones, contratos y jornadas, piloto controlado, smoke tests y soporte.</p>
             </article>
-            <article class="metric-card">
-              <span class="metric-value">02</span>
-              <h3>Diseño</h3>
-              <p>Figma, capas, C4/UML, DER y flujos.</p>
+            <article>
+              <span class="badge badge-green">Capacitación por rol</span>
+              <p>Administrador 8 h, gerente 4 h y chofer 4 h prácticas para módulos, alertas, jornada, auditoría y soporte.</p>
             </article>
-            <article class="metric-card">
-              <span class="metric-value">03</span>
-              <h3>Implementación</h3>
-              <p>Web, móvil, API, datos e integración.</p>
+            <article>
+              <span class="badge badge-purple">Mantenimiento</span>
+              <p>Correctivo, adaptativo, perfectivo y preventivo: errores, configuración, UX/reportes, logs, respaldos, seguridad y rendimiento.</p>
             </article>
-            <article class="metric-card">
-              <span class="metric-value">04</span>
-              <h3>Pruebas</h3>
-              <p>Matriz QA, evidencias y trazabilidad.</p>
-            </article>
-            <article class="metric-card">
-              <span class="metric-value">05</span>
-              <h3>Operación</h3>
-              <p>Despliegue, costos y mantenimiento.</p>
-            </article>
-            <article class="metric-card">
-              <span class="metric-value">06</span>
-              <h3>Limitaciones</h3>
-              <p>Alcance declarado y evolución futura.</p>
+            <article>
+              <span class="badge badge-amber">Evolución futura</span>
+              <p>GPS externo, telemetría, BI avanzado, push notifications, cloud productivo y módulos avanzados fuera del MVP.</p>
             </article>
           </div>
+          <p class="ops-final-defense reveal" style="--order: 3">El MVP no termina en la entrega del código; requiere operación controlada, capacitación por rol y mantenimiento para sostener su uso.</p>
         </div>
-        <template class="speaker-note">Esta sección debe preparar la transición hacia el informe final con evidencias reales, estados de cumplimiento y limitaciones declaradas por fase.</template>
       </section>
 
-      <section class="slide slide-close" id="slide-16" data-nav="Cierre" data-title="Cierre y criterios de revisión">
+      <section class="slide slide-close slide-fit" id="slide-22" data-title="Resultados y cierre" data-section="Cierre">
         <div class="grid-backdrop" aria-hidden="true"></div>
-        <div class="slide-inner close-layout">
+        <div class="slide-inner close-layout final-close-layout">
           <div class="close-copy reveal" style="--order: 1">
-            <span class="eyebrow">Criterios de revisión académica</span>
-            <h2>Cierre y criterios de revisión</h2>
-            <p class="lead">La revisión final debe confirmar que la presentación cubre todos los puntos del trabajo DISI, que cada sección tiene artefactos claros y que el alcance del MVP está justificado.</p>
+            <span class="eyebrow">Defensa final</span>
+            <h2>Resultados, conclusiones y cierre</h2>
+            <p class="lead">El resultado es un MVP defendible que integra web, app móvil, backend/API, datos, auditoría, pruebas, costos, mantenimiento y límites reconocidos.</p>
+            <div class="resource-row">
+              <a class="resource-link" href="#figma-link" aria-label="Ver Figma">Ver Figma</a>
+              <a class="resource-link" href="#sistema-web-link" aria-label="Abrir sistema web">Abrir sistema web</a>
+              <a class="resource-link" href="#app-movil-link" aria-label="Ver evidencias app móvil">Ver evidencias app móvil</a>
+              <a class="resource-link" href="#anexos-link" aria-label="Abrir carpeta de anexos">Abrir carpeta de anexos</a>
+            </div>
           </div>
-          <div class="review-checklist reveal" style="--order: 2">
+          <div class="final-close-grid reveal" style="--order: 2">
             <article>
-              <span class="check-mark"></span>
-              <p>¿El alcance DISI está bien delimitado?</p>
+              <span class="badge badge-green">Resultados</span>
+              <p>MVP operativo delimitado, web/app/backend integrados y trazabilidad con PostgreSQL, auditoría y evidencias QA.</p>
             </article>
             <article>
-              <span class="check-mark"></span>
-              <p>¿La idea TIC está justificada con Canvas?</p>
+              <span class="badge badge-blue">Conclusiones</span>
+              <p>El proyecto evidencia el ciclo DISI completo: análisis, diseño, implementación, pruebas y operación.</p>
             </article>
             <article>
-              <span class="check-mark"></span>
-              <p>¿El AS-IS/TO-BE explica la brecha?</p>
+              <span class="badge badge-amber">Límites</span>
+              <p>GPS real-time, BI, push, combustible, facturación, producción AWS estable y offline robusto quedan fuera del MVP.</p>
             </article>
             <article>
-              <span class="check-mark"></span>
-              <p>¿Los requerimientos se trazan hacia diseño y pruebas?</p>
-            </article>
-            <article>
-              <span class="check-mark"></span>
-              <p>¿El diseño incluye Figma, arquitectura, C4/UML y DER?</p>
-            </article>
-            <article>
-              <span class="check-mark"></span>
-              <p>¿La implementación diferencia web, móvil, backend y datos?</p>
-            </article>
-            <article>
-              <span class="check-mark"></span>
-              <p>¿Las pruebas validan el MVP?</p>
-            </article>
-            <article>
-              <span class="check-mark"></span>
-              <p>¿Despliegue, costos y mantenimiento están considerados?</p>
-            </article>
-            <article>
-              <span class="check-mark"></span>
-              <p>¿La evolución futura no invade el MVP?</p>
+              <span class="badge badge-purple">Recomendación</span>
+              <p>Consolidar QA, seguridad, monitoreo, anexos y estabilidad antes de ampliar el alcance.</p>
             </article>
           </div>
+          <p class="final-close-defense reveal" style="--order: 3">NANU TECH no se defiende como plataforma logística empresarial completa, sino como MVP web-móvil técnicamente delimitado y alineado al ciclo de vida de Diseño e Implementación de Sistemas.</p>
         </div>
-        <template class="speaker-note">Cerrar solicitando revisión sobre estructura, alcance, artefactos por reforzar y coherencia con el informe final.</template>
       </section>
     </main>
 
-    <div class="topbar" aria-hidden="true">
-      <span>NANU TECH</span>
-      <span id="mobileSlideLabel">Portada</span>
-    </div>
-
-    <div class="controls" aria-label="Controles de presentacion">
-      <button class="control-button" id="prevBtn" type="button" aria-label="Diapositiva anterior" title="Anterior">
-        <span aria-hidden="true">&larr;</span>
-        <span>Anterior</span>
-      </button>
-      <button class="control-button ghost" id="notesBtn" type="button" aria-label="Mostrar notas del expositor" aria-expanded="false">
-        <span>Notas</span>
-      </button>
-      <button class="control-button" id="nextBtn" type="button" aria-label="Diapositiva siguiente" title="Siguiente">
-        <span>Siguiente</span>
-        <span aria-hidden="true">&rarr;</span>
-      </button>
-    </div>
-
-    <div class="progress-wrap" aria-label="Progreso de presentacion">
-      <span class="progress-count" id="progressCount">1 / 16</span>
+    <footer class="deck-footer" aria-label="Controles de presentacion">
       <div class="progress-track" aria-hidden="true">
         <span class="progress-fill" id="progressFill"></span>
       </div>
-      <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
-    </div>
-
-    <aside class="notes-panel" id="notesPanel" aria-label="Notas del expositor" hidden>
-      <div class="notes-header">
-        <strong>Notas del expositor</strong>
-        <button type="button" id="closeNotesBtn" aria-label="Cerrar notas">&times;</button>
+      <div class="controls">
+        <button class="control-button" id="prevBtn" type="button" aria-label="Diapositiva anterior">
+          <span aria-hidden="true">&larr;</span>
+          <span>Anterior</span>
+        </button>
+        <button class="control-button" id="nextBtn" type="button" aria-label="Diapositiva siguiente">
+          <span>Siguiente</span>
+          <span aria-hidden="true">&rarr;</span>
+        </button>
       </div>
-      <p id="notesText"></p>
-    </aside>
+    </footer>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
