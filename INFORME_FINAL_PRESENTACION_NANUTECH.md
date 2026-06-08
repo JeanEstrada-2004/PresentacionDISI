@@ -13,13 +13,14 @@
 
 - Se aclaró que AWS está preparado para local/testing/cloud inicial, no para producción empresarial garantizada.
 - Se mantuvo la arquitectura AWS como evidencia y se agregaron chips de servicios considerados.
-- Se mantuvo el total de S/ 17,088 y se agregó desglose referencial:
-  - Desarrollo y adecuación del MVP: S/ 9,600.
-  - Infraestructura cloud/testing inicial: S/ 1,488.
-  - Capacitación por rol: S/ 1,200.
-  - Soporte y mantenimiento inicial: S/ 3,600.
-  - Contingencia técnica: S/ 1,200.
-- Se aclaró que el costo es académico y referencial, no cotización comercial.
+- Se mantuvo el total de S/ 17,088 y se agregó desglose referencial alineado al informe final:
+  - Desarrollo: S/ 11,775.
+  - Implementación inicial: S/ 1,620.
+  - Cloud/testing: S/ 510.
+  - Capacitación: S/ 550.
+  - Mantenimiento inicial: S/ 1,080.
+  - Contingencia: S/ 1,553.
+- Se aclaró que el costo es académico y referencial, no cotización comercial, y que el costo cloud debe ajustarse con AWS Pricing Calculator.
 
 ### Diapositiva 27: Operación, capacitación y mantenimiento
 

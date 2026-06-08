@@ -62,6 +62,20 @@ a:focus-visible {
     linear-gradient(135deg, #f8fafc 0%, #eef5ff 48%, #f8fafc 100%);
 }
 
+.presentation-shell::before {
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 28% 22%, rgba(37, 99, 235, 0.10), transparent 22%),
+    radial-gradient(circle at 72% 78%, rgba(8, 145, 178, 0.08), transparent 24%);
+  filter: blur(2px);
+  opacity: 0.7;
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+
 .deck-header {
   position: fixed;
   inset: 0 0 auto;
@@ -76,6 +90,21 @@ a:focus-visible {
   background: rgba(15, 23, 42, 0.94);
   border-bottom: 1px solid rgba(148, 163, 184, 0.18);
   backdrop-filter: blur(14px);
+}
+
+.deck-header,
+.deck-footer,
+.stage {
+  position: relative;
+}
+
+.deck-header,
+.deck-footer {
+  position: fixed;
+}
+
+.stage {
+  z-index: 1;
 }
 
 .brand-block,
@@ -101,6 +130,7 @@ a:focus-visible {
   background: linear-gradient(135deg, var(--blue), var(--cyan));
   border-radius: var(--radius);
   box-shadow: 0 12px 26px rgba(37, 99, 235, 0.28);
+  animation: brand-breathe 4.8s ease-in-out infinite;
 }
 
 .brand-name,
@@ -192,6 +222,26 @@ a:focus-visible {
   transform: translateX(0) scale(1);
 }
 
+.slide.active .slide-inner > * {
+  animation: content-rise 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.slide.active .slide-inner > *:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.slide.active .slide-inner > *:nth-child(3) {
+  animation-delay: 130ms;
+}
+
+.slide.active .slide-inner > *:nth-child(4) {
+  animation-delay: 190ms;
+}
+
+.slide.active .slide-inner > *:nth-child(5) {
+  animation-delay: 250ms;
+}
+
 .slide-inner {
   position: relative;
   z-index: 1;
@@ -201,6 +251,31 @@ a:focus-visible {
   align-self: center;
   justify-self: center;
   gap: 30px;
+}
+
+.slide[data-course]::before {
+  position: absolute;
+  top: 92px;
+  right: 56px;
+  z-index: 3;
+  max-width: min(720px, 100%);
+  padding: 7px 11px;
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.15;
+  content: attr(data-course);
+  background: rgba(239, 246, 255, 0.94);
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.08);
+}
+
+.slide-cover[data-course]::before,
+.slide-close[data-course]::before {
+  color: #dbeafe;
+  background: rgba(37, 99, 235, 0.22);
+  border-color: rgba(147, 197, 253, 0.34);
 }
 
 .two-column,
@@ -232,6 +307,7 @@ a:focus-visible {
     linear-gradient(90deg, rgba(148, 163, 184, 0.16) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.95), transparent 88%);
+  animation: grid-drift 24s linear infinite;
 }
 
 .copy-panel,
@@ -300,6 +376,26 @@ h1 {
   font-size: clamp(1rem, 1.4vw, 1.22rem);
   font-weight: 850;
   letter-spacing: 0;
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 10px;
+  max-width: 720px;
+  margin: -4px 0 18px;
+}
+
+.team-list span {
+  min-width: 0;
+  padding: 7px 9px;
+  color: #dbeafe;
+  font-size: clamp(0.68rem, 0.72vw, 0.78rem);
+  font-weight: 850;
+  line-height: 1.15;
+  background: rgba(15, 23, 42, 0.38);
+  border: 1px solid rgba(147, 197, 253, 0.22);
+  border-radius: var(--radius);
 }
 
 h2 {
@@ -2203,6 +2299,19 @@ svg {
   padding: 18px;
 }
 
+.course-bridge {
+  margin-top: 16px;
+  padding: 14px 16px;
+  color: #334155;
+  font-weight: 800;
+  line-height: 1.45;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--blue);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 .goal-card p {
   margin: 0;
   color: #334155;
@@ -2444,9 +2553,13 @@ svg {
   display: block;
   width: 0;
   height: 100%;
-  background: linear-gradient(90deg, var(--blue), var(--green));
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.44), transparent),
+    linear-gradient(90deg, var(--blue), var(--green));
+  background-size: 180px 100%, 100% 100%;
   border-radius: inherit;
   transition: width 360ms ease;
+  animation: progress-sheen 3.6s linear infinite;
 }
 
 .controls {
@@ -2466,10 +2579,17 @@ svg {
   border: 1px solid rgba(37, 99, 235, 0.35);
   border-radius: var(--radius);
   box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .control-button:hover {
   background: #1d4ed8;
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.24);
+  transform: translateY(-1px);
 }
 
 .control-button:disabled {
@@ -2494,6 +2614,174 @@ svg {
   animation-delay: calc(var(--order, 1) * 80ms);
 }
 
+.slide.active :where(
+  .hero-dashboard article,
+  .objective-grid article,
+  .persona-card,
+  .canvas-grid article,
+  .feature-card,
+  .metric-card,
+  .scope-card,
+  .actor-card,
+  .channel-card,
+  .sdlc-timeline article,
+  .rule-card,
+  .architecture-responsibilities article,
+  .offline-steps article,
+  .web-role-grid article,
+  .backend-card-grid article,
+  .qa-validation-grid article,
+  .ops-final-grid article,
+  .final-close-grid article,
+  .closing-grid article,
+  .artifact-card,
+  .evidence-frame,
+  .visual-card,
+  .stat-card,
+  .cost-card,
+  .summary-card,
+  .mini-table,
+  .trace-row,
+  .method-row,
+  .table-row
+) {
+  animation: element-pop 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.slide.active :where(
+  .hero-dashboard article,
+  .objective-grid article,
+  .persona-card,
+  .canvas-grid article,
+  .feature-card,
+  .metric-card,
+  .scope-card,
+  .actor-card,
+  .channel-card,
+  .sdlc-timeline article,
+  .rule-card,
+  .architecture-responsibilities article,
+  .offline-steps article,
+  .web-role-grid article,
+  .backend-card-grid article,
+  .qa-validation-grid article,
+  .ops-final-grid article,
+  .final-close-grid article,
+  .artifact-card,
+  .evidence-frame,
+  .visual-card,
+  .stat-card,
+  .cost-card,
+  .summary-card
+):nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.slide.active :where(
+  .hero-dashboard article,
+  .objective-grid article,
+  .persona-card,
+  .canvas-grid article,
+  .feature-card,
+  .metric-card,
+  .scope-card,
+  .actor-card,
+  .channel-card,
+  .sdlc-timeline article,
+  .rule-card,
+  .architecture-responsibilities article,
+  .offline-steps article,
+  .web-role-grid article,
+  .backend-card-grid article,
+  .qa-validation-grid article,
+  .ops-final-grid article,
+  .final-close-grid article,
+  .artifact-card,
+  .evidence-frame,
+  .visual-card,
+  .stat-card,
+  .cost-card,
+  .summary-card
+):nth-child(3) {
+  animation-delay: 150ms;
+}
+
+:where(
+  .hero-dashboard article,
+  .objective-grid article,
+  .persona-card,
+  .canvas-grid article,
+  .feature-card,
+  .metric-card,
+  .scope-card,
+  .actor-card,
+  .channel-card,
+  .sdlc-timeline article,
+  .rule-card,
+  .architecture-responsibilities article,
+  .offline-steps article,
+  .web-role-grid article,
+  .backend-card-grid article,
+  .qa-validation-grid article,
+  .ops-final-grid article,
+  .final-close-grid article,
+  .closing-grid article,
+  .artifact-card,
+  .evidence-frame,
+  .visual-card,
+  .stat-card,
+  .cost-card,
+  .summary-card
+) {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+:where(
+  .hero-dashboard article,
+  .objective-grid article,
+  .persona-card,
+  .canvas-grid article,
+  .feature-card,
+  .metric-card,
+  .scope-card,
+  .actor-card,
+  .channel-card,
+  .sdlc-timeline article,
+  .rule-card,
+  .architecture-responsibilities article,
+  .offline-steps article,
+  .web-role-grid article,
+  .backend-card-grid article,
+  .qa-validation-grid article,
+  .ops-final-grid article,
+  .final-close-grid article,
+  .artifact-card,
+  .evidence-frame,
+  .visual-card,
+  .stat-card,
+  .cost-card,
+  .summary-card
+):hover {
+  border-color: rgba(37, 99, 235, 0.26);
+  box-shadow: 0 20px 42px rgba(15, 23, 42, 0.13);
+  transform: translateY(-3px);
+}
+
+:where(.evidence-frame, .visual-card, .der-figure, .ux-evidence, .web-impl-visual, .mobile-impl-visual, .backend-visual) img {
+  transition:
+    filter 260ms ease,
+    transform 260ms ease;
+}
+
+:where(.evidence-frame, .visual-card, .der-figure, .ux-evidence, .web-impl-visual, .mobile-impl-visual, .backend-visual):hover img {
+  filter: saturate(1.05) contrast(1.02);
+  transform: scale(1.01);
+}
+
 @keyframes reveal-in {
   to {
     opacity: 1;
@@ -2501,10 +2789,79 @@ svg {
   }
 }
 
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5%, 1%, 0) scale(1.03);
+  }
+}
+
+@keyframes brand-breathe {
+  0%,
+  100% {
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.28);
+  }
+
+  50% {
+    box-shadow: 0 14px 32px rgba(8, 145, 178, 0.34);
+  }
+}
+
+@keyframes content-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes element-pop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 42px 42px;
+  }
+}
+
+@keyframes progress-sheen {
+  from {
+    background-position: -180px 0, 0 0;
+  }
+
+  to {
+    background-position: calc(100% + 180px) 0, 0 0;
+  }
+}
+
 @media (max-width: 1180px) {
   .slide {
     padding-right: 32px;
     padding-left: 32px;
+  }
+
+  .slide[data-course]::before {
+    right: 32px;
   }
 
   .two-column,
@@ -2649,6 +3006,13 @@ svg {
     padding: 82px 18px 112px;
   }
 
+  .slide[data-course]::before {
+    top: 70px;
+    right: 18px;
+    max-width: calc(100vw - 36px);
+    font-size: 0.68rem;
+  }
+
   .slide-fit {
     overflow: auto;
   }
@@ -2757,6 +3121,10 @@ svg {
 
   .phone-screen {
     min-height: 420px;
+  }
+
+  .team-list {
+    grid-template-columns: 1fr;
   }
 }
 
