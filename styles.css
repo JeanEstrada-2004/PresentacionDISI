@@ -159,7 +159,7 @@ a:focus-visible {
 }
 
 #currentTitle {
-  max-width: 42vw;
+  max-width: 54vw;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2279,8 +2279,17 @@ svg {
 }
 
 .slide-fit .objective-grid article {
-  min-height: 130px;
-  padding: 16px;
+  min-height: 118px;
+  padding: 14px 16px;
+}
+
+.slide-fit .objective-grid strong {
+  font-size: 0.96rem;
+}
+
+.slide-fit .objective-grid p {
+  font-size: 0.9rem;
+  line-height: 1.38;
 }
 
 .goal-card,
@@ -2299,19 +2308,6 @@ svg {
   padding: 18px;
 }
 
-.course-bridge {
-  margin-top: 16px;
-  padding: 14px 16px;
-  color: #334155;
-  font-weight: 800;
-  line-height: 1.45;
-  background: #f8fafc;
-  border: 1px solid var(--line);
-  border-left: 5px solid var(--blue);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
 .goal-card p {
   margin: 0;
   color: #334155;
@@ -2320,9 +2316,16 @@ svg {
 
 .scope-strip {
   display: grid;
-  grid-template-columns: 1.35fr 0.9fr;
+  grid-template-columns: 0.78fr 1.35fr 0.9fr;
   gap: 16px;
-  padding: 16px;
+  align-items: stretch;
+  padding: 18px;
+  border-top: 4px solid rgba(37, 99, 235, 0.78);
+}
+
+.scope-strip-strong {
+  background:
+    linear-gradient(135deg, rgba(239, 246, 255, 0.98), rgba(255, 255, 255, 0.96));
 }
 
 .scope-strip div {
@@ -2330,6 +2333,31 @@ svg {
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+}
+
+.scope-strip .scope-title {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding-right: 8px;
+  border-right: 1px solid var(--line);
+}
+
+.scope-strip .scope-title p {
+  margin: 0;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.scope-strip .scope-included,
+.scope-strip .scope-excluded {
+  align-content: center;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius);
 }
 
 .scope-strip strong {
@@ -2352,7 +2380,13 @@ svg {
   border-radius: 999px;
 }
 
-.scope-strip div:nth-child(2) span {
+.scope-strip .scope-included span {
+  color: #1e40af;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.scope-strip .scope-excluded span {
   color: #92400e;
   background: #fef3c7;
   border-color: #fde68a;
@@ -3135,6 +3169,7 @@ svg {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
 
