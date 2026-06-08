@@ -17,13 +17,13 @@
         </div>
       </div>
       <div class="deck-status">
-        <span id="currentTitle">Informe 1-2: Portada y resumen</span>
+        <span id="currentTitle">1-2. Resumen e introducción</span>
         <span id="slideCounter">1 / 28</span>
       </div>
     </header>
 
     <main class="stage" id="stage" aria-live="polite">
-      <section class="slide slide-cover slide-fit active" id="slide-1" data-title="Informe 1-2: Portada y resumen" data-section="Inicio" data-course="Enfoque DISI: MVP web-móvil como caso aplicado" data-speaker-note="Aquí presentamos NANU TECH como evidencia del ciclo completo de Diseño e Implementación de Sistemas.">
+      <section class="slide slide-cover slide-fit active" id="slide-1" data-title="1-2. Resumen e introducción" data-section="Inicio" data-course="Enfoque DISI: MVP web-móvil como caso aplicado" data-speaker-note="Aquí presentamos NANU TECH como evidencia del ciclo completo de Diseño e Implementación de Sistemas.">
         <div class="grid-backdrop" aria-hidden="true"></div>
         <div class="slide-inner cover-layout">
           <div class="cover-copy reveal" style="--order: 1">
@@ -70,7 +70,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-objetivos" data-title="Informe 3: Objetivos y alcance" data-section="Inicio" data-course="Concepto DISI: Objetivos, alcance y ciclo completo" data-speaker-note="Aquí aplicamos el enfoque del curso para delimitar qué se demuestra con el MVP y qué queda fuera.">
+      <section class="slide slide-fit" id="slide-objetivos" data-title="2.4. Objetivos y alcance" data-section="Inicio" data-course="Concepto DISI: Objetivos, alcance y ciclo completo" data-speaker-note="Aquí aplicamos el enfoque del curso para delimitar qué se demuestra con el MVP y qué queda fuera.">
         <div class="slide-inner objectives-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Objetivos del trabajo</span>
@@ -84,9 +84,9 @@
           <div class="objective-grid reveal" style="--order: 2" aria-label="Objetivos específicos del proyecto">
             <article><span>01</span><strong>Diagnóstico operativo</strong><p>Analizar la gestión dispersa de flota, jornadas, contratos, camiones, alertas y conductores.</p></article>
             <article><span>02</span><strong>Requerimientos</strong><p>Definir y priorizar RF/RNF del MVP con criterios de ingeniería y valor operativo.</p></article>
-            <article><span>03</span><strong>Diseño de solución</strong><p>Diseñar arquitectura funcional, lógica, datos y despliegue para web, app, backend y offline básico.</p></article>
-            <article><span>04</span><strong>Implementación</strong><p>Implementar módulos principales diferenciando funcionalidades web, móviles y backend.</p></article>
-            <article><span>05</span><strong>Validación</strong><p>Validar con pruebas funcionales, integración web-backend-app, seguridad y offline/sync.</p></article>
+            <article><span>03</span><strong>Diseño de solución</strong><p>Diseñar arquitectura funcional, lógica, datos y despliegue para web, app, servicios técnicos y offline básico.</p></article>
+            <article><span>04</span><strong>Implementación</strong><p>Implementar módulos principales diferenciando funcionalidades web, móviles, servicios técnicos y datos.</p></article>
+            <article><span>05</span><strong>Validación</strong><p>Validar con pruebas funcionales, integración web-móvil-servicios-datos, seguridad y offline/sync.</p></article>
             <article><span>06</span><strong>Operación futura</strong><p>Proponer despliegue, costos, capacitación, mantenimiento y evolución del sistema.</p></article>
           </div>
           <div class="scope-strip scope-strip-strong reveal" style="--order: 3" aria-label="Alcance del MVP">
@@ -119,34 +119,34 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-2" data-title="Informe 6.1: Análisis | Contexto operativo" data-section="Problema" data-course="Concepto DISI: Análisis de negocio y contexto operativo" data-speaker-note="Aquí aplicamos análisis de negocio para entender la operación antes de proponer tecnología.">
+      <section class="slide slide-fit" id="slide-2" data-title="2.1. Problemática | Contexto operativo" data-section="Problema" data-course="Concepto DISI: Análisis de negocio y contexto operativo" data-speaker-note="Aquí aplicamos análisis de negocio para entender la operación antes de proponer tecnología.">
         <div class="slide-inner two-column">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Transporte de carga</span>
             <h2>Contexto del problema</h2>
-            <p class="lead">Este bloque aplica análisis de negocio para justificar la necesidad de una solución TIC en operaciones de transporte de carga.</p>
+            <p class="lead">En operaciones de transporte de carga, la gestión administrativa y el trabajo del chofer ocurren en espacios distintos. NANU TECH se plantea para conectar ambos mediante una plataforma web-móvil con registros trazables.</p>
             <ul class="key-list">
-              <li>Camiones, contratos, conductores, jornadas y alertas se gestionan como piezas operativas conectadas.</li>
-              <li>Cuando cada dato vive por separado, se pierde continuidad entre planificación, ejecución y seguimiento.</li>
-              <li>La oficina necesita consultar eventos de campo sin depender de registros manuales o comunicación informal.</li>
+              <li>La oficina gestiona camiones, contratos, jornadas, conductores y alertas.</li>
+              <li>El chofer registra turno, observaciones e incidencias desde campo.</li>
+              <li>Cuando esos datos no se integran, se pierde continuidad, visibilidad y trazabilidad operativa.</li>
             </ul>
           </div>
           <div class="evidence-board reveal" style="--order: 2">
-            <div class="ops-map" aria-label="Mapa visual oficina campo">
-              <article><strong>Oficina</strong><span>Administra camiones, contratos, jornadas y conductores.</span></article>
-              <article><strong>Campo</strong><span>El chofer registra turno, observaciones, incidencias y alertas.</span></article>
-              <article><strong>Servicios técnicos</strong><span>Sostienen reglas, permisos, persistencia y auditoría compartida.</span></article>
-              <article><strong>Datos</strong><span>Consolida jornadas, contratos, alertas, unidades, usuarios y trazabilidad.</span></article>
+            <div class="ops-map" aria-label="Flujo visual de contexto operativo">
+              <article><strong>Oficina</strong><span>Administración y gerencia gestionan flota, contratos y jornadas.</span></article>
+              <article><strong>Campo</strong><span>El chofer registra turno, observaciones, SOS/auxilio e incidencias.</span></article>
+              <article><strong>Datos dispersos</strong><span>La información queda separada entre canales, registros o comunicación informal.</span></article>
+              <article><strong>NANU TECH</strong><span>Plataforma web-móvil que conecta operación, datos y trazabilidad.</span></article>
             </div>
             <article class="diagnosis-band">
               <span class="artifact-chip">Diagnóstico</span>
-              <p>El problema central es la desconexión entre administración web, operación móvil del chofer y datos consolidados.</p>
+              <p>Se requiere una solución web-móvil que conecte oficina, operación en campo y datos consolidados para mejorar trazabilidad y seguimiento operativo.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-3" data-title="Informe 6.1: Análisis | Identificación del problema" data-section="Problema" data-course="Concepto DISI: Identificación del problema" data-speaker-note="Aquí aplicamos diagnóstico del problema para convertir una brecha operativa en requerimientos.">
+      <section class="slide slide-fit" id="slide-3" data-title="2.1. Problemática | Brecha operativa" data-section="Problema" data-course="Concepto DISI: Identificación del problema" data-speaker-note="Aquí aplicamos diagnóstico del problema para convertir una brecha operativa en requerimientos.">
         <div class="slide-inner split-visual">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Brecha operativa</span>
@@ -183,7 +183,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-4" data-title="Informe 5.3: Idea TIC | Segmento objetivo" data-section="Usuarios" data-course="Concepto DISI: Usuarios, mercado y contexto de uso" data-speaker-note="Aquí aplicamos segmentación de usuarios para justificar a quién sirve el MVP.">
+      <section class="slide slide-fit" id="slide-4" data-title="2.2. Segmento objetivo y contexto de uso" data-section="Usuarios" data-course="Concepto DISI: Usuarios, mercado y contexto de uso" data-speaker-note="Aquí aplicamos segmentación de usuarios para justificar a quién sirve el MVP.">
         <div class="slide-inner segment-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Mercado y usuarios</span>
@@ -219,7 +219,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-justificacion" data-title="Informe 3: Justificación del proyecto" data-section="Problema" data-course="Concepto DISI: Justificación TIC e innovación operativa" data-speaker-note="Aquí conectamos la necesidad operativa con el valor académico y empresarial de la solución.">
+      <section class="slide slide-fit" id="slide-justificacion" data-title="2.3. Justificación" data-section="Problema" data-course="Concepto DISI: Justificación TIC e innovación operativa" data-speaker-note="Aquí conectamos la necesidad operativa con el valor académico y empresarial de la solución.">
         <div class="slide-inner justification-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Valor académico y operativo</span>
@@ -255,7 +255,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-5" data-title="Informe 5.3: Idea TIC | Lean Canvas" data-section="Idea TIC" data-course="Concepto DISI: Idea de negocio TIC y Canvas" data-speaker-note="Aquí aplicamos Canvas para conectar problema, usuarios, propuesta de valor y modelo operativo.">
+      <section class="slide slide-fit" id="slide-5" data-title="4.3. Idea TIC seleccionada | Lean Canvas" data-section="Idea TIC" data-course="Concepto DISI: Idea de negocio TIC y Canvas" data-speaker-note="Aquí aplicamos Canvas para conectar problema, usuarios, propuesta de valor y modelo operativo.">
         <div class="slide-inner canvas-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Idea TIC</span>
@@ -280,7 +280,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-6" data-title="Informe 6.1: Análisis | Benchmark" data-section="Benchmark" data-course="Concepto DISI: Análisis comparativo y delimitación de valor" data-speaker-note="Aquí usamos comparación de mercado para delimitar el valor sin sobreprometer telemetría empresarial.">
+      <section class="slide slide-fit" id="slide-6" data-title="5.1.3. Análisis comparativo" data-section="Benchmark" data-course="Concepto DISI: Análisis comparativo y delimitación de valor" data-speaker-note="Aquí usamos comparación de mercado para delimitar el valor frente a telemetría empresarial avanzada.">
         <div class="slide-inner">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Benchmark</span>
@@ -314,7 +314,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-7" data-title="Informe 5.3: Propuesta de valor" data-section="Valor" data-course="Concepto DISI: Propuesta de valor e innovación digital" data-speaker-note="Aquí conectamos innovación TIC con valor operativo concreto para pymes de transporte.">
+      <section class="slide slide-fit" id="slide-7" data-title="3.2 / 4.3. Idea TIC y propuesta de valor" data-section="Valor" data-course="Concepto DISI: Propuesta de valor e innovación digital" data-speaker-note="Aquí conectamos innovación TIC con valor operativo concreto para pymes de transporte.">
         <div class="slide-inner value-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Valor del sistema</span>
@@ -355,7 +355,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-8" data-title="Informe 5.5: Priorización | Alcance MVP" data-section="MVP" data-course="Concepto DISI: Alcance, MVP y exclusiones" data-speaker-note="Aquí aplicamos delimitación de alcance para transformar la idea TIC en una versión funcional acotada.">
+      <section class="slide slide-fit" id="slide-8" data-title="5.1.2. Alcance funcional del MVP" data-section="MVP" data-course="Concepto DISI: Alcance, MVP y exclusiones" data-speaker-note="Aquí aplicamos delimitación de alcance para transformar la idea TIC en una versión funcional acotada.">
         <div class="slide-inner">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Delimitación</span>
@@ -398,13 +398,13 @@
             </article>
           </div>
           <div class="scope-closure reveal" style="--order: 3">
-            <span class="artifact-chip">Criterio de defensa</span>
-            <p>Todo lo incluido debe poder explicarse, evidenciarse o defenderse como parte del flujo operativo mínimo.</p>
+            <span class="artifact-chip">Criterio de alcance</span>
+            <p>Todo lo incluido debe poder explicarse, evidenciarse o validarse como parte del flujo operativo mínimo.</p>
           </div>
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-dimensionamiento" data-title="Informe 6.1: Análisis | Dimensionamiento" data-section="MVP" data-course="Concepto DISI: Supuestos, viabilidad y dimensionamiento" data-speaker-note="Aquí aplicamos supuestos para estimar carga, costos, capacitación y mantenimiento sin simular una empresa real.">
+      <section class="slide slide-fit" id="slide-dimensionamiento" data-title="5.1.5. Supuestos de dimensionamiento" data-section="MVP" data-course="Concepto DISI: Supuestos, viabilidad y dimensionamiento" data-speaker-note="Aquí aplicamos supuestos para estimar carga, costos, capacitación y mantenimiento sin simular una empresa real.">
         <div class="slide-inner">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Escenario académico</span>
@@ -432,7 +432,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-9" data-title="Informe 6.1: Análisis | Actores y canales" data-section="Sistema" data-course="Concepto DISI: Actores, canales y responsabilidades" data-speaker-note="Aquí separamos usuario, interfaz y soporte técnico para evitar confundir servicios comunes con actores funcionales.">
+      <section class="slide slide-fit" id="slide-9" data-title="5.1.1. Actores y canales" data-section="Sistema" data-course="Concepto DISI: Actores, canales y responsabilidades" data-speaker-note="Aquí separamos usuario, interfaz y soporte técnico para evitar confundir servicios comunes con actores funcionales.">
         <div class="slide-inner actors-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Responsabilidades</span>
@@ -453,7 +453,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-10" data-title="Informe 5.2: Ciclo de vida adoptado" data-section="SDLC" data-course="Concepto DISI: SDLC como eje metodológico" data-speaker-note="Aquí aplicamos SDLC para conectar análisis, diseño, implementación, pruebas, despliegue y mantenimiento.">
+      <section class="slide slide-fit" id="slide-10" data-title="4.2. Ciclo de vida adoptado" data-section="SDLC" data-course="Concepto DISI: SDLC como eje metodológico" data-speaker-note="Aquí aplicamos SDLC para conectar análisis, diseño, implementación, pruebas, despliegue y mantenimiento.">
         <div class="slide-inner sdlc-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Ciclo de vida</span>
@@ -474,7 +474,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-metodologia" data-title="Informe 5: Metodología empleada" data-section="SDLC" data-course="Concepto DISI: Metodología aplicada y fuentes" data-speaker-note="Aquí transformamos fuentes documentales y técnicas en artefactos verificables del proyecto.">
+      <section class="slide slide-fit" id="slide-metodologia" data-title="4. Metodología" data-section="SDLC" data-course="Concepto DISI: Metodología aplicada y fuentes" data-speaker-note="Aquí transformamos fuentes documentales y técnicas en artefactos verificables del proyecto.">
         <div class="slide-inner">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Procedimiento aplicado</span>
@@ -510,7 +510,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-11" data-title="Informe 5.4: Requerimientos" data-section="Análisis" data-course="Concepto DISI: Ingeniería de requerimientos RF/RNF" data-speaker-note="Aquí aplicamos ingeniería de requerimientos para convertir diagnóstico en funciones verificables.">
+      <section class="slide slide-fit" id="slide-11" data-title="5.1.6-5.1.7. RF y RNF" data-section="Análisis" data-course="Concepto DISI: Ingeniería de requerimientos RF/RNF" data-speaker-note="Aquí aplicamos ingeniería de requerimientos para convertir diagnóstico en funciones verificables.">
         <div class="slide-inner requirements-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Ingeniería de requerimientos</span>
@@ -539,7 +539,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-reglas" data-title="Informe 5.4: Reglas de negocio" data-section="Análisis" data-course="Concepto DISI: Reglas de negocio verificables" data-speaker-note="Aquí convertimos requerimientos en reglas que luego se diseñan, implementan y prueban.">
+      <section class="slide slide-fit" id="slide-reglas" data-title="5.1.8. Reglas de negocio" data-section="Análisis" data-course="Concepto DISI: Reglas de negocio verificables" data-speaker-note="Aquí convertimos requerimientos en reglas que luego se diseñan, implementan y prueban.">
         <div class="slide-inner rules-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Criterios operativos</span>
@@ -576,7 +576,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-12" data-title="Informe 5.5: Priorización MoSCoW" data-section="Análisis" data-course="Concepto DISI: MoSCoW y trazabilidad" data-speaker-note="Aquí aplicamos MoSCoW para delimitar el alcance y trazar funciones hacia evidencia.">
+      <section class="slide slide-fit" id="slide-12" data-title="4.5 / 5.1.9. Priorización y trazabilidad" data-section="Análisis" data-course="Concepto DISI: MoSCoW y trazabilidad" data-speaker-note="Aquí aplicamos MoSCoW para delimitar el alcance y trazar funciones hacia evidencia.">
         <div class="slide-inner trace-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Control del alcance</span>
@@ -614,7 +614,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-13" data-title="Informe 6.2: Diseño UX" data-section="Diseño" data-course="Concepto DISI: Diseño funcional y prototipado UX" data-speaker-note="Aquí aplicamos diseño funcional para validar flujos visuales antes de implementar.">
+      <section class="slide slide-fit" id="slide-13" data-title="5.2.1-5.2.2. Diseño funcional web/móvil" data-section="Diseño" data-course="Concepto DISI: Diseño funcional y prototipado UX" data-speaker-note="Aquí aplicamos diseño funcional para validar flujos visuales antes de implementar.">
         <div class="slide-inner ux-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Diseño de interacción</span>
@@ -627,7 +627,7 @@
               <li>Criterio UX: interfaz clara, rápida, operativa y auditable.</li>
             </ul>
             <div class="resource-row">
-              <a class="resource-link" href="#figma-link" aria-label="Ver Figma">Ver Figma</a>
+              <a class="resource-link" href="https://www.figma.com/make/WjtzpUGwH9IhE6gbyF77dd/Nanutech-DISI?t=LSqRi849Gp5T3uk5-1&amp;preview-route=%2Flogin" target="_blank" rel="noopener noreferrer" aria-label="Abrir prototipo Figma Nanutech DISI">Ver Figma</a>
             </div>
           </div>
           <div class="evidence-pair ux-evidence reveal" style="--order: 2" aria-label="Prototipos UX representativos">
@@ -644,7 +644,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-14" data-title="Informe 6.2: Arquitectura" data-section="Diseño" data-course="Concepto DISI: Diseño arquitectónico por responsabilidades" data-speaker-note="Aquí aplicamos arquitectura para separar canales de usuario, datos, servicios técnicos y operación.">
+      <section class="slide slide-fit" id="slide-14" data-title="5.2.3. Diseño arquitectónico" data-section="Diseño" data-course="Concepto DISI: Diseño arquitectónico por responsabilidades" data-speaker-note="Aquí aplicamos arquitectura para separar canales de usuario, datos, servicios técnicos y operación.">
         <div class="slide-inner architecture-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Estructura técnica</span>
@@ -668,7 +668,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-offline" data-title="Informe 6.2: Sincronización offline" data-section="Diseño" data-course="Concepto DISI: Diseño técnico de sincronización" data-speaker-note="Aquí aplicamos diseño técnico para responder a conectividad variable sin prometer offline robusto.">
+      <section class="slide slide-fit" id="slide-offline" data-title="5.2.4. Sincronización offline" data-section="Diseño" data-course="Concepto DISI: Diseño técnico de sincronización" data-speaker-note="Aquí aplicamos diseño técnico para responder a conectividad variable sin afirmar offline robusto.">
         <div class="slide-inner offline-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Resiliencia operativa</span>
@@ -698,7 +698,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-15" data-title="Informe 6.1/6.2: Modelo de datos" data-section="Diseño" data-course="Concepto DISI: Diseño de datos y trazabilidad" data-speaker-note="Aquí aplicamos modelo de datos para sostener trazabilidad entre jornada, conductor, unidad, contrato y auditoría.">
+      <section class="slide slide-fit" id="slide-15" data-title="5.2.5. Diseño de datos" data-section="Diseño" data-course="Concepto DISI: Diseño de datos y trazabilidad" data-speaker-note="Aquí aplicamos modelo de datos para sostener trazabilidad entre jornada, conductor, unidad, contrato y auditoría.">
         <div class="slide-inner data-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Trazabilidad de datos</span>
@@ -731,7 +731,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-16" data-title="Informe 6.3: Implementación web" data-section="Implementación" data-course="Concepto DISI: Implementación modular del canal web" data-speaker-note="Aquí materializamos el diseño en módulos web por rol y uso de servicios comunes.">
+      <section class="slide slide-fit" id="slide-16" data-title="5.3.1. Implementación web" data-section="Implementación" data-course="Concepto DISI: Implementación modular del canal web" data-speaker-note="Aquí materializamos el diseño en módulos web por rol y uso de servicios comunes.">
         <div class="slide-inner web-impl-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Canal web</span>
@@ -742,9 +742,6 @@
               <article><span class="badge badge-purple">Gerente</span><p>Dashboard gerencial, contratos, asignación de unidades e historial operativo.</p></article>
               <article><span class="badge badge-amber">Chofer web</span><p>Canal secundario para consulta de jornada, observaciones, SOS/auxilio o contingencia.</p></article>
               <article><span class="badge badge-green">Integración</span><p>Roles, permisos y datos compartidos con la app móvil mediante servicios comunes.</p></article>
-            </div>
-            <div class="resource-row">
-              <a class="resource-link" href="#sistema-web-link" aria-label="Abrir sistema web">Abrir sistema web</a>
             </div>
           </div>
           <div class="web-impl-visual reveal" style="--order: 2" aria-label="Evidencia de implementación web">
@@ -767,7 +764,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-17" data-title="Informe 6.3: Implementación móvil" data-section="Implementación" data-course="Concepto DISI: Implementación móvil orientada al usuario operativo" data-speaker-note="Aquí aplicamos el requerimiento operativo del chofer en campo mediante el canal móvil principal.">
+      <section class="slide slide-fit" id="slide-17" data-title="5.3.3. Implementación móvil" data-section="Implementación" data-course="Concepto DISI: Implementación móvil orientada al usuario operativo" data-speaker-note="Aquí aplicamos el requerimiento operativo del chofer en campo mediante el canal móvil principal.">
         <div class="slide-inner mobile-impl-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Canal principal del chofer</span>
@@ -780,9 +777,6 @@
               <li>Offline básico con cola local y sincronización posterior controlada.</li>
               <li>No implementa GPS real-time ni tracking en mapa vivo.</li>
             </ul>
-            <div class="resource-row">
-              <a class="resource-link" href="#app-movil-link" aria-label="Ver evidencias app móvil">Ver evidencias app móvil</a>
-            </div>
           </div>
           <div class="mobile-impl-visual reveal" style="--order: 2" aria-label="Evidencia app móvil y flujo operativo">
             <div class="mobile-flow">
@@ -807,7 +801,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-18" data-title="Informe 6.3: Servicios técnicos y auditoría" data-section="Implementación" data-course="Concepto DISI: Servicios técnicos, seguridad y auditoría" data-speaker-note="Aquí explicamos los servicios técnicos que permiten compartir reglas, permisos, datos y auditoría sin presentarlos como actor funcional.">
+      <section class="slide slide-fit" id="slide-18" data-title="5.2.6 / 5.3.2. Seguridad, calidad y servicios" data-section="Implementación" data-course="Concepto DISI: Servicios técnicos, seguridad y auditoría" data-speaker-note="Aquí explicamos los servicios técnicos que permiten compartir reglas, permisos, datos y auditoría sin presentarlos como actor funcional.">
         <div class="slide-inner backend-layout">
           <div class="copy-panel reveal" style="--order: 1">
             <span class="eyebrow">Servicios compartidos</span>
@@ -836,7 +830,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-19" data-title="Informe 6.4: Pruebas" data-section="Validación" data-course="Concepto DISI: Pruebas y validación de requerimientos" data-speaker-note="Aquí aplicamos pruebas para validar que los requerimientos priorizados se cumplen con evidencia.">
+      <section class="slide slide-fit" id="slide-19" data-title="5.4. Fase de pruebas" data-section="Validación" data-course="Concepto DISI: Pruebas y validación de requerimientos" data-speaker-note="Aquí aplicamos pruebas para validar que los requerimientos priorizados se cumplen con evidencia.">
         <div class="slide-inner qa-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Validación</span>
@@ -860,7 +854,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-20" data-title="Informe 6.5: Despliegue y costos" data-section="Operación" data-course="Concepto DISI: Despliegue inicial, costos y viabilidad" data-speaker-note="Aquí aplicamos despliegue y costos para discutir viabilidad inicial sin afirmar producción estable.">
+      <section class="slide slide-fit" id="slide-20" data-title="5.1.10 / 5.5. Costos y despliegue" data-section="Operación" data-course="Concepto DISI: Despliegue inicial, costos y viabilidad" data-speaker-note="Aquí aplicamos despliegue y costos para discutir viabilidad inicial sin afirmar producción estable.">
         <div class="slide-inner deploy-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Infraestructura</span>
@@ -901,7 +895,7 @@
         </div>
       </section>
 
-      <section class="slide slide-fit" id="slide-21" data-title="Informe 6.6: Operación y mantenimiento" data-section="Operación" data-course="Concepto DISI: Operación, capacitación y mantenimiento" data-speaker-note="Aquí aplicamos mantenimiento correctivo, adaptativo, perfectivo y preventivo para sostener el MVP.">
+      <section class="slide slide-fit" id="slide-21" data-title="5.5.1-5.6. Operación, capacitación y mantenimiento" data-section="Operación" data-course="Concepto DISI: Operación, capacitación y mantenimiento" data-speaker-note="Aquí aplicamos mantenimiento correctivo, adaptativo, perfectivo y preventivo para sostener el MVP.">
         <div class="slide-inner ops-final-layout">
           <div class="center-copy reveal" style="--order: 1">
             <span class="eyebrow">Sostenibilidad</span>
@@ -930,7 +924,7 @@
         </div>
       </section>
 
-      <section class="slide slide-close slide-fit" id="slide-22" data-title="Informe 7-9: Resultados, discusión y cierre" data-section="Cierre" data-course="Concepto DISI: Resultados, discusión crítica y conclusiones" data-speaker-note="Aquí cerramos demostrando cumplimiento del ciclo DISI, límites reconocidos y evolución futura.">
+      <section class="slide slide-close slide-fit" id="slide-22" data-title="6-8. Resultados, discusión y cierre" data-section="Cierre" data-course="Concepto DISI: Resultados, discusión crítica y conclusiones" data-speaker-note="Aquí cerramos demostrando cumplimiento del ciclo DISI, límites reconocidos y evolución futura.">
         <div class="grid-backdrop" aria-hidden="true"></div>
         <div class="slide-inner close-layout final-close-layout">
           <div class="close-copy reveal" style="--order: 1">
@@ -938,10 +932,7 @@
             <h2>Resultados, conclusiones y cierre</h2>
             <p class="lead">NANU TECH se presenta como una plataforma web-móvil para trazabilidad operativa de flota: la web gestiona, la app móvil opera, los datos trazan y los servicios técnicos sostienen seguridad, persistencia y auditoría.</p>
             <div class="resource-row">
-              <a class="resource-link" href="#figma-link" aria-label="Ver Figma">Ver Figma</a>
-              <a class="resource-link" href="#sistema-web-link" aria-label="Abrir sistema web">Abrir sistema web</a>
-              <a class="resource-link" href="#app-movil-link" aria-label="Ver evidencias app móvil">Ver evidencias app móvil</a>
-              <a class="resource-link" href="#anexos-link" aria-label="Abrir carpeta de anexos">Abrir carpeta de anexos</a>
+              <a class="resource-link" href="https://dev.d3g5ny75rmk1un.amplifyapp.com/login" target="_blank" rel="noopener noreferrer" aria-label="Abrir sistema web NANU TECH">Abrir sistema web</a>
             </div>
           </div>
           <div class="final-close-grid reveal" style="--order: 2">
