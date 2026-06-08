@@ -481,6 +481,55 @@ h3 {
   border: 1px solid rgba(147, 197, 253, 0.25);
 }
 
+.theme-action {
+  margin-top: 18px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 15px;
+  color: #dbeafe;
+  font-size: 0.9rem;
+  font-weight: 850;
+  background: rgba(15, 23, 42, 0.62);
+  border: 1px solid rgba(147, 197, 253, 0.34);
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.theme-toggle::before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background:
+    radial-gradient(circle at 36% 36%, #ffffff 0 22%, transparent 24%),
+    linear-gradient(135deg, #60a5fa, #22c55e);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.34);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: #ffffff;
+  background: rgba(37, 99, 235, 0.76);
+  border-color: rgba(191, 219, 254, 0.62);
+  transform: translateY(-1px);
+}
+
+.theme-toggle[aria-pressed="true"]::before {
+  background:
+    radial-gradient(circle at 64% 36%, #0f172a 0 28%, transparent 30%),
+    linear-gradient(135deg, #dbeafe, #93c5fd);
+}
+
 .artifact-chip {
   color: #1e40af;
   background: #eff6ff;
@@ -3493,6 +3542,279 @@ svg {
 .evidence-figure.is-zoomable:hover .evidence-image {
   filter: saturate(1.05) contrast(1.02);
   transform: scale(1.01);
+}
+
+body.theme-dark {
+  --navy: #08111f;
+  --navy-2: #0f172a;
+  --surface: #111827;
+  --page: #08111f;
+  --line: rgba(148, 163, 184, 0.24);
+  --text: #e5edf9;
+  --muted: #a8b5c8;
+  --shadow: 0 20px 52px rgba(0, 0, 0, 0.34);
+  color-scheme: dark;
+}
+
+body.theme-dark .presentation-shell {
+  background:
+    radial-gradient(circle at 80% 14%, rgba(37, 99, 235, 0.24), transparent 30%),
+    radial-gradient(circle at 14% 84%, rgba(34, 197, 94, 0.14), transparent 26%),
+    linear-gradient(135deg, #08111f 0%, #0f172a 52%, #101827 100%);
+}
+
+body.theme-dark .presentation-shell::before {
+  background:
+    radial-gradient(circle at 24% 20%, rgba(96, 165, 250, 0.15), transparent 24%),
+    radial-gradient(circle at 76% 78%, rgba(34, 211, 238, 0.10), transparent 24%);
+  opacity: 0.72;
+}
+
+body.theme-dark .deck-header {
+  color: #edf4ff;
+  background: rgba(8, 17, 31, 0.96);
+  border-bottom-color: rgba(148, 163, 184, 0.24);
+}
+
+body.theme-dark .deck-footer {
+  background: linear-gradient(180deg, transparent, rgba(8, 17, 31, 0.62));
+}
+
+body.theme-dark .progress-track {
+  background: rgba(148, 163, 184, 0.28);
+}
+
+body.theme-dark :where(
+  h1,
+  h2,
+  h3,
+  h4,
+  strong,
+  .brand-name,
+  .slide-counter,
+  #currentTitle,
+  #slideCounter,
+  .table-header,
+  .cost-head span
+) {
+  color: #f8fbff;
+}
+
+body.theme-dark :where(
+  p,
+  li,
+  .lead,
+  .brand-subtitle,
+  .table-row span,
+  .method-row span,
+  .trace-row span,
+  .cost-row span,
+  .cost-lines span,
+  .scope-title p
+) {
+  color: var(--muted);
+}
+
+body.theme-dark .slide[data-course]::before {
+  color: #bfdbfe;
+  background: rgba(15, 23, 42, 0.76);
+  border-color: rgba(147, 197, 253, 0.34);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+body.theme-dark .eyebrow,
+body.theme-dark .artifact-chip {
+  color: #bfdbfe;
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(147, 197, 253, 0.30);
+}
+
+body.theme-dark .tag {
+  color: #e0f2fe;
+  background: rgba(37, 99, 235, 0.22);
+  border-color: rgba(147, 197, 253, 0.34);
+}
+
+body.theme-dark :where(
+  .goal-card,
+  .scope-strip,
+  .scope-column,
+  .scope-card,
+  .persona-card,
+  .metric-card,
+  .feature-card,
+  .canvas-grid article,
+  .comparison-table,
+  .benchmark-conclusion,
+  .value-difference,
+  .scope-closure,
+  .stat-card,
+  .objective-grid article,
+  .dimension-grid article,
+  .dimension-rationale article,
+  .method-table,
+  .method-row,
+  .requirements-table,
+  .table-row,
+  .requirements-closure,
+  .rule-card,
+  .trace-table,
+  .trace-row,
+  .evidence-board,
+  .ops-map article,
+  .diagnosis-band,
+  .alert-card,
+  .actor-card,
+  .channel-card,
+  .role-map article,
+  .artifact-card,
+  .visual-card,
+  .mini-table,
+  .sdlc-timeline article,
+  .architecture-responsibilities article,
+  .offline-steps article,
+  .data-card-grid article,
+  .web-role-grid article,
+  .backend-card-grid article,
+  .web-backup-note,
+  .qa-validation-grid article,
+  .cost-card,
+  .development-cost-table,
+  .cloud-position,
+  .cost-model-row article,
+  .ops-final-grid article,
+  .final-close-grid article,
+  .summary-card,
+  .service-card,
+  .resource-card,
+  .evidence-figure,
+  .trace-defense,
+  .ux-defense,
+  .architecture-defense,
+  .offline-defense,
+  .data-defense,
+  .web-defense,
+  .mobile-defense,
+  .backend-defense,
+  .qa-defense,
+  .deploy-defense,
+  .ops-final-defense,
+  .final-close-defense
+) {
+  color: var(--text);
+  background: rgba(15, 23, 42, 0.82);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+body.theme-dark :where(
+  .hero-dashboard article,
+  .slide-close .closing-grid article
+) {
+  background: rgba(15, 23, 42, 0.72);
+  border-color: rgba(148, 163, 184, 0.26);
+}
+
+body.theme-dark .slide-cover .hero-dashboard article {
+  color: #f8fbff;
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+body.theme-dark .slide-cover .hero-dashboard h3 {
+  color: #f8fbff;
+}
+
+body.theme-dark .slide-cover .hero-dashboard p {
+  color: #cbd5e1;
+}
+
+body.theme-dark :where(
+  .badge-blue,
+  .badge-green,
+  .badge-amber,
+  .badge-purple
+) {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.theme-dark .badge-blue {
+  color: #bfdbfe;
+  background: rgba(37, 99, 235, 0.28);
+}
+
+body.theme-dark .badge-green {
+  color: #bbf7d0;
+  background: rgba(22, 163, 74, 0.26);
+}
+
+body.theme-dark .badge-amber {
+  color: #fde68a;
+  background: rgba(180, 83, 9, 0.28);
+}
+
+body.theme-dark .badge-purple {
+  color: #e9d5ff;
+  background: rgba(126, 34, 206, 0.30);
+}
+
+body.theme-dark :where(
+  .scope-included span,
+  .scope-excluded span,
+  .deploy-chip-grid span,
+  .mobile-flow span
+) {
+  color: #bfdbfe;
+  background: rgba(37, 99, 235, 0.16);
+  border-color: rgba(147, 197, 253, 0.30);
+}
+
+body.theme-dark .scope-excluded span {
+  color: #fde68a;
+  background: rgba(180, 83, 9, 0.22);
+  border-color: rgba(245, 158, 11, 0.36);
+}
+
+body.theme-dark :where(
+  .evidence-image,
+  .lightbox-figure img
+) {
+  background: #0b1220;
+  border-color: rgba(148, 163, 184, 0.30);
+}
+
+body.theme-dark :where(
+  .table-header,
+  .cost-head,
+  .comparison-table header
+) {
+  background: #020617;
+}
+
+body.theme-dark :where(
+  .cost-table-title,
+  .cost-total-row,
+  .artifact-chip
+) {
+  background: rgba(37, 99, 235, 0.16);
+}
+
+body.theme-dark .theme-toggle {
+  color: #0f172a;
+  background: rgba(219, 234, 254, 0.92);
+  border-color: rgba(255, 255, 255, 0.62);
+}
+
+body.theme-dark .theme-toggle:hover,
+body.theme-dark .theme-toggle:focus-visible {
+  color: #ffffff;
+  background: rgba(37, 99, 235, 0.86);
+}
+
+body.theme-dark .control-button.ghost {
+  color: var(--text);
+  background: rgba(15, 23, 42, 0.88);
+  border-color: var(--line);
 }
 
 @keyframes reveal-in {

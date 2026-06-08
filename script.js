@@ -9,14 +9,20 @@ const imageLightbox = document.getElementById("imageLightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxTitle = document.getElementById("lightboxTitle");
 const lightboxClose = document.getElementById("lightboxClose");
+const themeToggle = document.getElementById("themeToggle");
+const themeToggleText = document.getElementById("themeToggleText");
 
 const totalSlides = slides.length;
 const storageKey = "nanu-tech-disi-final-current-slide";
+const themeStorageKey = "nanu-tech-disi-final-theme";
+const darkThemeClass = "theme-dark";
+const lightThemeClass = "theme-light";
 let currentSlide = getInitialSlide();
 let lastLightboxTrigger = null;
+let currentTheme = getInitialTheme();
 
 function getInitialSlide() {
-  const hashMatch = window.location.hash.match(/^#slide-(\d+)$/);
+  const hashMatch = window.location.hash.match(/^#slide-(\d+)/);
   if (hashMatch) {
     return clampIndex(Number(hashMatch[1]) - 1);
   }
@@ -42,6 +48,76 @@ function writeStoredSlide(index) {
     window.localStorage.setItem(storageKey, String(index));
   } catch (error) {
     // La presentacion sigue funcionando aunque el navegador bloquee localStorage.
+  }
+}
+
+function readStoredTheme() {
+  try {
+    return window.localStorage.getItem(themeStorageKey);
+  } catch (error) {
+    return null;
+  }
+}
+
+function writeStoredTheme(theme) {
+  try {
+    window.localStorage.setItem(themeStorageKey, theme);
+  } catch (error) {
+    // El selector sigue funcionando aunque no pueda persistir la preferencia.
+  }
+}
+
+function getInitialTheme() {
+  const searchParams = new URLSearchParams(window.location.search);
+  const queryTheme = searchParams.get("theme");
+  const hashQuery = window.location.hash.includes("?")
+    ? new URLSearchParams(window.location.hash.split("?")[1])
+    : null;
+  const hashTheme = hashQuery ? hashQuery.get("theme") : null;
+
+  if (queryTheme === "dark" || queryTheme === "light") {
+    return queryTheme;
+  }
+
+  if (hashTheme === "dark" || hashTheme === "light") {
+    return hashTheme;
+  }
+
+  const storedTheme = readStoredTheme();
+  if (storedTheme === "dark" || storedTheme === "light") {
+    return storedTheme;
+  }
+
+  return "light";
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+
+  document.body.classList.toggle(darkThemeClass, isDark);
+  document.body.classList.toggle(lightThemeClass, !isDark);
+
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
+  }
+
+  if (themeToggleText) {
+    themeToggleText.textContent = isDark ? "Modo claro" : "Modo oscuro";
+  }
+}
+
+function toggleTheme() {
+  currentTheme = currentTheme === "dark" ? "light" : "dark";
+  applyTheme(currentTheme);
+  writeStoredTheme(currentTheme);
+}
+
+function initThemeToggle() {
+  applyTheme(currentTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", toggleTheme);
   }
 }
 
@@ -237,12 +313,13 @@ function handleKeydown(event) {
 }
 
 function init() {
+  initThemeToggle();
   initImageLightbox();
   prevBtn.addEventListener("click", previousSlide);
   nextBtn.addEventListener("click", nextSlide);
   window.addEventListener("keydown", handleKeydown);
   window.addEventListener("hashchange", () => {
-    const hashMatch = window.location.hash.match(/^#slide-(\d+)$/);
+    const hashMatch = window.location.hash.match(/^#slide-(\d+)/);
     if (hashMatch) {
       currentSlide = clampIndex(Number(hashMatch[1]) - 1);
       render();
